@@ -193,7 +193,6 @@
 				TargetAttributes = {
 					418B3B831EB8E35300D05CB6 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 5Z6FLXW2PN;
 						ProvisioningStyle = Automatic;
 					};
 					418B3B971EB8E35400D05CB6 = {
@@ -417,7 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5Z6FLXW2PN;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ShareATextbook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyp.ShareATextbook;
@@ -430,7 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5Z6FLXW2PN;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ShareATextbook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyp.ShareATextbook;
