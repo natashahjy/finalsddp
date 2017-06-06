@@ -15,7 +15,8 @@
 		418B3B9D1EB8E35400D05CB6 /* ShareATextbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B3B9C1EB8E35400D05CB6 /* ShareATextbookTests.swift */; };
 		418B3BA81EB8E35400D05CB6 /* ShareATextbookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B3BA71EB8E35400D05CB6 /* ShareATextbookUITests.swift */; };
 		510144051EE4E3970057E0DF /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 510144041EE4E3970057E0DF /* Search.storyboard */; };
-		51F824FF1EDD43F8004BE4F7 /* Upload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F824FE1EDD43F8004BE4F7 /* Upload.storyboard */; };
+		51748A861EE64AD10026D934 /* Upload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51748A851EE64AD10026D934 /* Upload.storyboard */; };
+		51748A881EE64BC80026D934 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51748A871EE64BC80026D934 /* UploadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,8 @@
 		418B3BA71EB8E35400D05CB6 /* ShareATextbookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareATextbookUITests.swift; sourceTree = "<group>"; };
 		418B3BA91EB8E35400D05CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		510144041EE4E3970057E0DF /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
-		51F824FE1EDD43F8004BE4F7 /* Upload.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Upload.storyboard; sourceTree = "<group>"; };
+		51748A851EE64AD10026D934 /* Upload.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Upload.storyboard; sourceTree = "<group>"; };
+		51748A871EE64BC80026D934 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +106,12 @@
 				418B3B871EB8E35300D05CB6 /* AppDelegate.swift */,
 				418B3B891EB8E35300D05CB6 /* ViewController.swift */,
 				418B3B8B1EB8E35400D05CB6 /* Main.storyboard */,
-				418B3B8E1EB8E35400D05CB6 /* Assets.xcassets */,
 				418B3B901EB8E35400D05CB6 /* LaunchScreen.storyboard */,
-				418B3B931EB8E35400D05CB6 /* Info.plist */,
-				51F824FE1EDD43F8004BE4F7 /* Upload.storyboard */,
+				51748A851EE64AD10026D934 /* Upload.storyboard */,
 				510144041EE4E3970057E0DF /* Search.storyboard */,
+				418B3B8E1EB8E35400D05CB6 /* Assets.xcassets */,
+				418B3B931EB8E35400D05CB6 /* Info.plist */,
+				51748A871EE64BC80026D934 /* UploadViewController.swift */,
 			);
 			path = ShareATextbook;
 			sourceTree = "<group>";
@@ -240,8 +243,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51748A861EE64AD10026D934 /* Upload.storyboard in Resources */,
 				418B3B921EB8E35400D05CB6 /* LaunchScreen.storyboard in Resources */,
-				51F824FF1EDD43F8004BE4F7 /* Upload.storyboard in Resources */,
 				418B3B8F1EB8E35400D05CB6 /* Assets.xcassets in Resources */,
 				418B3B8D1EB8E35400D05CB6 /* Main.storyboard in Resources */,
 				510144051EE4E3970057E0DF /* Search.storyboard in Resources */,
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				418B3B8A1EB8E35300D05CB6 /* ViewController.swift in Sources */,
+				51748A881EE64BC80026D934 /* UploadViewController.swift in Sources */,
 				418B3B881EB8E35300D05CB6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +430,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ShareATextbook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyp.ShareATextbook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,6 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ShareATextbook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nyp.ShareATextbook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
