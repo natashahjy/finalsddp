@@ -17,6 +17,7 @@
 		510144051EE4E3970057E0DF /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 510144041EE4E3970057E0DF /* Search.storyboard */; };
 		51748A861EE64AD10026D934 /* Upload.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51748A851EE64AD10026D934 /* Upload.storyboard */; };
 		51748A881EE64BC80026D934 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51748A871EE64BC80026D934 /* UploadViewController.swift */; };
+		51748A8A1EE64F360026D934 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51748A891EE64F360026D934 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		510144041EE4E3970057E0DF /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		51748A851EE64AD10026D934 /* Upload.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Upload.storyboard; sourceTree = "<group>"; };
 		51748A871EE64BC80026D934 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		51748A891EE64F360026D934 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +107,14 @@
 			children = (
 				418B3B871EB8E35300D05CB6 /* AppDelegate.swift */,
 				418B3B891EB8E35300D05CB6 /* ViewController.swift */,
+				51748A891EE64F360026D934 /* HomeViewController.swift */,
+				51748A871EE64BC80026D934 /* UploadViewController.swift */,
 				418B3B8B1EB8E35400D05CB6 /* Main.storyboard */,
 				418B3B901EB8E35400D05CB6 /* LaunchScreen.storyboard */,
 				51748A851EE64AD10026D934 /* Upload.storyboard */,
 				510144041EE4E3970057E0DF /* Search.storyboard */,
 				418B3B8E1EB8E35400D05CB6 /* Assets.xcassets */,
 				418B3B931EB8E35400D05CB6 /* Info.plist */,
-				51748A871EE64BC80026D934 /* UploadViewController.swift */,
 			);
 			path = ShareATextbook;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				418B3B8A1EB8E35300D05CB6 /* ViewController.swift in Sources */,
 				51748A881EE64BC80026D934 /* UploadViewController.swift in Sources */,
 				418B3B881EB8E35300D05CB6 /* AppDelegate.swift in Sources */,
+				51748A8A1EE64F360026D934 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
