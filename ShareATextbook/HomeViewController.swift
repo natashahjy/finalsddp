@@ -26,6 +26,22 @@ class HomeViewController: UIViewController {
     
     @IBAction func segmentChanged(sender: Any)
     {
+        if (sizeSegment.selectedSegmentIndex == 0)
+        {
+            var storyboard = UIStoryboard(name: "Favourites", bundle: nil)
+            var controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
+            
+            self.present(controller, animated:true, completion:nil)
+        }
+        
+        if (sizeSegment.selectedSegmentIndex == 1)
+        {
+            var storyboard = UIStoryboard(name: "Home", bundle: nil)
+            var controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
+            
+            self.present(controller, animated:true, completion:nil)
+        }
+        
         if (sizeSegment.selectedSegmentIndex == 2)
         {
             var storyboard = UIStoryboard(name: "Upload", bundle: nil)
