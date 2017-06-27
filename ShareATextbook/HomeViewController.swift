@@ -28,24 +28,24 @@ class HomeViewController: UIViewController {
     {
         if (sizeSegment.selectedSegmentIndex == 0)
         {
-            var storyboard = UIStoryboard(name: "Favourites", bundle: nil)
-            var controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
+            let storyboard = UIStoryboard(name: "Favourites", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
             
             self.present(controller, animated:true, completion:nil)
         }
         
         if (sizeSegment.selectedSegmentIndex == 1)
         {
-            var storyboard = UIStoryboard(name: "Home", bundle: nil)
-            var controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
             
             self.present(controller, animated:true, completion:nil)
         }
         
         if (sizeSegment.selectedSegmentIndex == 2)
         {
-            var storyboard = UIStoryboard(name: "Upload", bundle: nil)
-            var controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
+            let storyboard = UIStoryboard(name: "Upload", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "UploadViewController") as UIViewController
     
             self.present(controller, animated:true, completion:nil)
         }
