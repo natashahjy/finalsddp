@@ -1,0 +1,6 @@
+framework module Pods_ShareATextbookUITests {
+  umbrella header "Pods-ShareATextbookUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
