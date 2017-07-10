@@ -705,7 +705,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="barcodeTextField" destination="Mgv-CM-FTn" id="SDV-eO-Kf0"/>
-                        <outlet property="sizeSegment" destination="22H-1a-x4O" id="V5e-3J-vcU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9s-rl-bNf" sceneMemberID="firstResponder"/>
