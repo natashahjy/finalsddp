@@ -40,6 +40,7 @@
 		6A9D56671F0691B3009F77AD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D56661F0691B3009F77AD /* LoginViewController.swift */; };
 		6A9D56691F077E01009F77AD /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9D56681F077E01009F77AD /* LoginNavigationController.swift */; };
 		6A9D566B1F078DBA009F77AD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9D566A1F078DBA009F77AD /* Home.storyboard */; };
+		6AA220401F1362AF009FCD50 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA2203F1F1362AF009FCD50 /* LoginDataManager.swift */; };
 		8D258E14A50E1F7B5E26DDB2 /* Pods_ShareATextbookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873C60DC19D5D2359DCE7BD7 /* Pods_ShareATextbookTests.framework */; };
 		9D70D0249A4CD46C5D2DAED6 /* Pods_ShareATextbookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8D43BA0182059C7C42EEEC /* Pods_ShareATextbookUITests.framework */; };
 /* End PBXBuildFile section */
@@ -106,6 +107,7 @@
 		6A9D56661F0691B3009F77AD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6A9D56681F077E01009F77AD /* LoginNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		6A9D566A1F078DBA009F77AD /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		6AA2203F1F1362AF009FCD50 /* LoginDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
 		76EE4C131E5E94275BDF8594 /* Pods-ShareATextbookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareATextbookTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareATextbookTests/Pods-ShareATextbookTests.release.xcconfig"; sourceTree = "<group>"; };
 		873C60DC19D5D2359DCE7BD7 /* Pods_ShareATextbookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareATextbookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99029A339FDC00712F9C8792 /* Pods-ShareATextbookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareATextbookUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareATextbookUITests/Pods-ShareATextbookUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 			children = (
 				6A9AB4511F131FF500CA8396 /* UploadDataManager.swift */,
 				6A8251A01F0C9902006D3B92 /* RegisterDataManager.swift */,
+				6AA2203F1F1362AF009FCD50 /* LoginDataManager.swift */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -380,7 +383,7 @@
 				TargetAttributes = {
 					418B3B831EB8E35300D05CB6 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 5Z6FLXW2PN;
+						DevelopmentTeam = BYULLYQ27M;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -602,6 +605,7 @@
 				6A9AB4501F131FE000CA8396 /* BarcodeViewController.swift in Sources */,
 				418B3B881EB8E35300D05CB6 /* AppDelegate.swift in Sources */,
 				6A9AB44F1F131FE000CA8396 /* HomeViewController.swift in Sources */,
+				6AA220401F1362AF009FCD50 /* LoginDataManager.swift in Sources */,
 				6A9AB4401F131FD300CA8396 /* CategoryViewController.swift in Sources */,
 				6A9D56691F077E01009F77AD /* LoginNavigationController.swift in Sources */,
 				5146803A1F132CBD0059CD4A /* BarcodeScannerViewController.swift in Sources */,
@@ -753,7 +757,7 @@
 			baseConfigurationReference = 5F0012F84DCD09E759E02EE8 /* Pods-ShareATextbook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5Z6FLXW2PN;
+				DEVELOPMENT_TEAM = BYULLYQ27M;
 				INFOPLIST_FILE = ShareATextbook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -771,7 +775,7 @@
 			baseConfigurationReference = 4101F1BDC2931E0C50CE6C10 /* Pods-ShareATextbook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5Z6FLXW2PN;
+				DEVELOPMENT_TEAM = BYULLYQ27M;
 				INFOPLIST_FILE = ShareATextbook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
