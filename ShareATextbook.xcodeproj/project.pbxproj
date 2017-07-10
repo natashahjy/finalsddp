@@ -11,6 +11,8 @@
 		418B3B8F1EB8E35400D05CB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418B3B8E1EB8E35400D05CB6 /* Assets.xcassets */; };
 		418B3B9D1EB8E35400D05CB6 /* ShareATextbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B3B9C1EB8E35400D05CB6 /* ShareATextbookTests.swift */; };
 		418B3BA81EB8E35400D05CB6 /* ShareATextbookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B3BA71EB8E35400D05CB6 /* ShareATextbookUITests.swift */; };
+		5146803A1F132CBD0059CD4A /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514680381F132CBD0059CD4A /* BarcodeScannerViewController.swift */; };
+		5146803B1F132CBD0059CD4A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514680391F132CBD0059CD4A /* PreviewViewController.swift */; };
 		6A2244FC3810DC00C7A03DE3 /* Pods_ShareATextbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDAD1AC93AE59F2727198E8 /* Pods_ShareATextbook.framework */; };
 		6A3514361F03583C00098ECB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3514351F03583C00098ECB /* Security.framework */; };
 		6A35143D1F03660700098ECB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A35143C1F03660700098ECB /* Login.storyboard */; };
@@ -18,8 +20,6 @@
 		6A3514421F03E50500098ECB /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3514411F03E50500098ECB /* DesignableTextField.swift */; };
 		6A71E5E81F0BC1FE006A51E7 /* SHA512.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71E5E71F0BC1FE006A51E7 /* SHA512.swift */; };
 		6A71E5EA1F0BD902006A51E7 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71E5E91F0BD902006A51E7 /* Validation.swift */; };
-		6A71E5EC1F0C06A3006A51E7 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71E5EB1F0C06A3006A51E7 /* KeychainWrapper.swift */; };
-		6A71E5EE1F0C0739006A51E7 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71E5ED1F0C0739006A51E7 /* KeychainItemAccessibility.swift */; };
 		6A8251A11F0C9902006D3B92 /* RegisterDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8251A01F0C9902006D3B92 /* RegisterDataManager.swift */; };
 		6A9AB41C1F131E4600CA8396 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB41B1F131E4600CA8396 /* HTTP.swift */; };
 		6A9AB41E1F131E6D00CA8396 /* SwiftJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB41D1F131E6D00CA8396 /* SwiftJSON.swift */; };
@@ -27,7 +27,6 @@
 		6A9AB43E1F131FB200CA8396 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB43D1F131FB200CA8396 /* RegisterViewController.swift */; };
 		6A9AB4401F131FD300CA8396 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB43F1F131FD300CA8396 /* CategoryViewController.swift */; };
 		6A9AB4491F131FE000CA8396 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB4411F131FE000CA8396 /* UploadViewController.swift */; };
-		6A9AB44A1F131FE000CA8396 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB4421F131FE000CA8396 /* ListingViewController.swift */; };
 		6A9AB44B1F131FE000CA8396 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB4431F131FE000CA8396 /* CameraViewController.swift */; };
 		6A9AB44C1F131FE000CA8396 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB4441F131FE000CA8396 /* SearchViewController.swift */; };
 		6A9AB44D1F131FE000CA8396 /* ConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB4451F131FE000CA8396 /* ConditionViewController.swift */; };
@@ -75,6 +74,8 @@
 		418B3BA71EB8E35400D05CB6 /* ShareATextbookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareATextbookUITests.swift; sourceTree = "<group>"; };
 		418B3BA91EB8E35400D05CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A7DF222E5CD0500A0FCB288 /* Pods-ShareATextbookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareATextbookUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareATextbookUITests/Pods-ShareATextbookUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		514680381F132CBD0059CD4A /* BarcodeScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewController.swift; sourceTree = "<group>"; };
+		514680391F132CBD0059CD4A /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		5F0012F84DCD09E759E02EE8 /* Pods-ShareATextbook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareATextbook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareATextbook/Pods-ShareATextbook.debug.xcconfig"; sourceTree = "<group>"; };
 		6A3514351F03583C00098ECB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6A3514371F03588100098ECB /* bridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bridgingHeader.h; path = ../bridgingHeader.h; sourceTree = "<group>"; };
@@ -83,8 +84,6 @@
 		6A3514411F03E50500098ECB /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
 		6A71E5E71F0BC1FE006A51E7 /* SHA512.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA512.swift; sourceTree = "<group>"; };
 		6A71E5E91F0BD902006A51E7 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		6A71E5EB1F0C06A3006A51E7 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = "../../../Desktop/SwiftKeychainWrapper-develop/SwiftKeychainWrapper/KeychainWrapper.swift"; sourceTree = "<group>"; };
-		6A71E5ED1F0C0739006A51E7 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeychainItemAccessibility.swift; path = "../../../Desktop/SwiftKeychainWrapper-develop/SwiftKeychainWrapper/KeychainItemAccessibility.swift"; sourceTree = "<group>"; };
 		6A71E5F21F0C19CB006A51E7 /* FBBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBBridgingHeader.h; sourceTree = "<group>"; };
 		6A82519E1F0C7A43006D3B92 /* ShareATextbook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareATextbook.entitlements; sourceTree = "<group>"; };
 		6A8251A01F0C9902006D3B92 /* RegisterDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterDataManager.swift; sourceTree = "<group>"; };
@@ -94,7 +93,6 @@
 		6A9AB43D1F131FB200CA8396 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6A9AB43F1F131FD300CA8396 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		6A9AB4411F131FE000CA8396 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
-		6A9AB4421F131FE000CA8396 /* ListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		6A9AB4431F131FE000CA8396 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		6A9AB4441F131FE000CA8396 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6A9AB4451F131FE000CA8396 /* ConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionViewController.swift; sourceTree = "<group>"; };
@@ -219,8 +217,6 @@
 		6A3514291F03572D00098ECB /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				6A71E5ED1F0C0739006A51E7 /* KeychainItemAccessibility.swift */,
-				6A71E5EB1F0C06A3006A51E7 /* KeychainWrapper.swift */,
 				6A71E5E71F0BC1FE006A51E7 /* SHA512.swift */,
 				6A71E5E91F0BD902006A51E7 /* Validation.swift */,
 				6A9AB41B1F131E4600CA8396 /* HTTP.swift */,
@@ -244,8 +240,9 @@
 		6A35142F1F03577F00098ECB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				514680381F132CBD0059CD4A /* BarcodeScannerViewController.swift */,
+				514680391F132CBD0059CD4A /* PreviewViewController.swift */,
 				6A9AB4411F131FE000CA8396 /* UploadViewController.swift */,
-				6A9AB4421F131FE000CA8396 /* ListingViewController.swift */,
 				6A9AB4431F131FE000CA8396 /* CameraViewController.swift */,
 				6A9AB4441F131FE000CA8396 /* SearchViewController.swift */,
 				6A9AB4451F131FE000CA8396 /* ConditionViewController.swift */,
@@ -383,7 +380,7 @@
 				TargetAttributes = {
 					418B3B831EB8E35300D05CB6 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = BYULLYQ27M;
+						DevelopmentTeam = 5Z6FLXW2PN;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -602,17 +599,17 @@
 				6A9AB4491F131FE000CA8396 /* UploadViewController.swift in Sources */,
 				6A9AB41E1F131E6D00CA8396 /* SwiftJSON.swift in Sources */,
 				6A9AB44E1F131FE000CA8396 /* DetailsViewController.swift in Sources */,
-				6A71E5EE1F0C0739006A51E7 /* KeychainItemAccessibility.swift in Sources */,
 				6A9AB4501F131FE000CA8396 /* BarcodeViewController.swift in Sources */,
 				418B3B881EB8E35300D05CB6 /* AppDelegate.swift in Sources */,
 				6A9AB44F1F131FE000CA8396 /* HomeViewController.swift in Sources */,
 				6A9AB4401F131FD300CA8396 /* CategoryViewController.swift in Sources */,
 				6A9D56691F077E01009F77AD /* LoginNavigationController.swift in Sources */,
+				5146803A1F132CBD0059CD4A /* BarcodeScannerViewController.swift in Sources */,
+				5146803B1F132CBD0059CD4A /* PreviewViewController.swift in Sources */,
 				6A9AB43C1F131F6A00CA8396 /* Upload.swift in Sources */,
 				6A35143F1F03DE8000098ECB /* GradientView.swift in Sources */,
 				6A9AB4521F131FF500CA8396 /* UploadDataManager.swift in Sources */,
 				6A9AB44D1F131FE000CA8396 /* ConditionViewController.swift in Sources */,
-				6A9AB44A1F131FE000CA8396 /* ListingViewController.swift in Sources */,
 				6A9AB44C1F131FE000CA8396 /* SearchViewController.swift in Sources */,
 				6A71E5E81F0BC1FE006A51E7 /* SHA512.swift in Sources */,
 				6A9D56671F0691B3009F77AD /* LoginViewController.swift in Sources */,
@@ -621,7 +618,6 @@
 				6A71E5EA1F0BD902006A51E7 /* Validation.swift in Sources */,
 				6A9AB44B1F131FE000CA8396 /* CameraViewController.swift in Sources */,
 				6A8251A11F0C9902006D3B92 /* RegisterDataManager.swift in Sources */,
-				6A71E5EC1F0C06A3006A51E7 /* KeychainWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,7 +753,7 @@
 			baseConfigurationReference = 5F0012F84DCD09E759E02EE8 /* Pods-ShareATextbook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BYULLYQ27M;
+				DEVELOPMENT_TEAM = 5Z6FLXW2PN;
 				INFOPLIST_FILE = ShareATextbook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -765,6 +761,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = bridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -774,7 +771,7 @@
 			baseConfigurationReference = 4101F1BDC2931E0C50CE6C10 /* Pods-ShareATextbook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BYULLYQ27M;
+				DEVELOPMENT_TEAM = 5Z6FLXW2PN;
 				INFOPLIST_FILE = ShareATextbook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -782,6 +779,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = bridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

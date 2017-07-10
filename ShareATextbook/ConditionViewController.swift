@@ -21,10 +21,10 @@ class ConditionViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         let uiAlert = UIAlertController(
             title: "You selected \(selected)",
-            message: "111",
+            message: "",
             preferredStyle: UIAlertControllerStyle.alert)
         
-        uiAlert.addAction(UIAlertAction( title: "---",
+        uiAlert.addAction(UIAlertAction( title: "Close",
                                          style: .default,
                                          handler: nil))
         self.present(

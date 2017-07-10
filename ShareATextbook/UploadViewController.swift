@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UploadViewController: UIViewController, UITableViewDelegate {
+class UploadViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var barcode: String!
     var bookTitle: String!
@@ -46,34 +46,22 @@ class UploadViewController: UIViewController, UITableViewDelegate {
     }
     
     
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//        var cell :  PreviewCell = tableView.dequeueReusableCell(withIdentifier: "PreviewCell", for: indexPath) as! PreviewCell
-//        
-//        let p = uploadList[indexPath.row]
-//        
-//        cell.barcodeLabel?.text = p.barcode
-//        // cell.barcodeLabel?.text = barcode
-//        cell.categoryLabel?.text = p.category
-//        cell.titleLabel?.text = p.title
-//        cell.conditionLabel?.text = p.condition
-//        cell.tagLabel?.text = p.tag
-//        
-//        return cell
-//    }
-
-    func prepareForSegue(segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Upload" {
-            let uploadVC = segue.destination as! ListingViewController
-            
-            uploadVC.barcode = barcode
-            uploadVC.bookTitle = bookTitle
-            uploadVC.condition = condition
-            uploadVC.category = category
-        }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier: "PreviewCell", for: indexPath)
+        /*
+        let p = uploadList[indexPath.row]
+        
+        cell.barcodeLabel?.text = p.barcode
+        // cell.barcodeLabel?.text = barcode
+        cell.categoryLabel?.text = p.category
+        cell.titleLabel?.text = p.title
+        cell.conditionLabel?.text = p.condition
+        cell.tagLabel?.text = p.tag
+        */
+        return cell
     }
-
- 
+    
     /*
     // MARK: - Navigation
 
