@@ -29,7 +29,6 @@
 		6A9AB43E1F131FB200CA8396 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB43D1F131FB200CA8396 /* RegisterViewController.swift */; };
 		6A9AB4401F131FD300CA8396 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB43F1F131FD300CA8396 /* CategoryViewController.swift */; };
 		6A9AB4491F131FE000CA8396 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB4411F131FE000CA8396 /* UploadViewController.swift */; };
-		6A9AB44A1F131FE000CA8396 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB4421F131FE000CA8396 /* ListingViewController.swift */; };
 		6A9AB44B1F131FE000CA8396 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB4431F131FE000CA8396 /* CameraViewController.swift */; };
 		6A9AB44C1F131FE000CA8396 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB4441F131FE000CA8396 /* SearchViewController.swift */; };
 		6A9AB44D1F131FE000CA8396 /* ConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9AB4451F131FE000CA8396 /* ConditionViewController.swift */; };
@@ -98,7 +97,6 @@
 		6A9AB43D1F131FB200CA8396 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6A9AB43F1F131FD300CA8396 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		6A9AB4411F131FE000CA8396 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
-		6A9AB4421F131FE000CA8396 /* ListingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		6A9AB4431F131FE000CA8396 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		6A9AB4441F131FE000CA8396 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6A9AB4451F131FE000CA8396 /* ConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionViewController.swift; sourceTree = "<group>"; };
@@ -251,7 +249,6 @@
 				514680381F132CBD0059CD4A /* BarcodeScannerViewController.swift */,
 				514680391F132CBD0059CD4A /* PreviewViewController.swift */,
 				6A9AB4411F131FE000CA8396 /* UploadViewController.swift */,
-				6A9AB4421F131FE000CA8396 /* ListingViewController.swift */,
 				6A9AB4431F131FE000CA8396 /* CameraViewController.swift */,
 				6A9AB4441F131FE000CA8396 /* SearchViewController.swift */,
 				6A9AB4451F131FE000CA8396 /* ConditionViewController.swift */,
@@ -620,7 +617,6 @@
 				6A35143F1F03DE8000098ECB /* GradientView.swift in Sources */,
 				6A9AB4521F131FF500CA8396 /* UploadDataManager.swift in Sources */,
 				6A9AB44D1F131FE000CA8396 /* ConditionViewController.swift in Sources */,
-				6A9AB44A1F131FE000CA8396 /* ListingViewController.swift in Sources */,
 				6A9AB44C1F131FE000CA8396 /* SearchViewController.swift in Sources */,
 				6A71E5E81F0BC1FE006A51E7 /* SHA512.swift in Sources */,
 				6A9D56671F0691B3009F77AD /* LoginViewController.swift in Sources */,

@@ -11,8 +11,6 @@ import UIKit
 class BarcodeViewController: UIViewController {
     @IBOutlet weak var barcodeTextField : UITextField!
     
-    var uploadItem : Upload!
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
