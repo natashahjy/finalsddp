@@ -4,7 +4,6 @@
 //
 //  Created by ITP312 on 6/6/17.
 //  Copyright © 2017 natashahjy. All rights reserved.
-// https://www.newventuresoftware.com/blog/organizing-xcode-projects-using-multiple-storyboards
 
 import UIKit
 
@@ -45,9 +44,10 @@ class HomeViewController: UIViewController {
         if (sizeSegment.selectedSegmentIndex == 2)
         {
             let storyboard = UIStoryboard(name: "Upload", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "UploadViewController") as UIViewController
-    
-            self.present(controller, animated:true, completion:nil)
+            let navcontroller = storyboard.instantiateViewController(withIdentifier: "NavViewController") as UIViewController
+            
+            self.present(navcontroller, animated:true, completion:nil)
+
         }
     }
 
