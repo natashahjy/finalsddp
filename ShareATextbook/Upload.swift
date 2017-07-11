@@ -10,11 +10,16 @@ import UIKit
 
 class Upload: NSObject {
     // Upload Object
-    var barcode: String! = ""
-    var category: String! = ""
+    var token : String = ""
+    var categoryID : String! = ""
     var title: String! = ""
-    var condition: String! = ""
-    var tag: String! = ""
+    var barcode: String! = ""
+    var desc : String! = ""
+    var author : String! = ""
+    var publisher : String! = ""
+    var edition : String! = ""
+    var photo : String! = ""
+    var preferredLocation : String! = ""
    
     /*
     init(barcode: String,
