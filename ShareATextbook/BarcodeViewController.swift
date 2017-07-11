@@ -12,6 +12,14 @@ class BarcodeViewController: UIViewController {
     @IBOutlet weak var barcodeTextField : UITextField!
     @IBOutlet weak var sizeSegment: UISegmentedControl!
     
+    @IBAction func confirmButton(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        defaults.set(barcodeTextField.text, forKey: "barcodeTextField")
+        defaults.synchronize()
+        
+        print("barcode=\(barcodeTextField.text)")
+        
+    }
     var uploadItem : Upload!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,7 +36,6 @@ class BarcodeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     func prepareForSegue(segue:UIStoryboardSegue, sender:Any?) {
         uploadItem.barcode = barcodeTextField.text

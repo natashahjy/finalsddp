@@ -244,16 +244,16 @@
 		6A35142F1F03577F00098ECB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				514680381F132CBD0059CD4A /* BarcodeScannerViewController.swift */,
-				514680391F132CBD0059CD4A /* PreviewViewController.swift */,
-				6A9AB4411F131FE000CA8396 /* UploadViewController.swift */,
-				6A9AB4431F131FE000CA8396 /* CameraViewController.swift */,
-				6A9AB4441F131FE000CA8396 /* SearchViewController.swift */,
-				6A9AB4451F131FE000CA8396 /* ConditionViewController.swift */,
-				6A9AB4461F131FE000CA8396 /* DetailsViewController.swift */,
 				6A9AB4471F131FE000CA8396 /* HomeViewController.swift */,
 				6A9AB4481F131FE000CA8396 /* BarcodeViewController.swift */,
+				514680381F132CBD0059CD4A /* BarcodeScannerViewController.swift */,
+				6A9AB4461F131FE000CA8396 /* DetailsViewController.swift */,
+				6A9AB4431F131FE000CA8396 /* CameraViewController.swift */,
 				6A9AB43F1F131FD300CA8396 /* CategoryViewController.swift */,
+				6A9AB4451F131FE000CA8396 /* ConditionViewController.swift */,
+				514680391F132CBD0059CD4A /* PreviewViewController.swift */,
+				6A9AB4411F131FE000CA8396 /* UploadViewController.swift */,
+				6A9AB4441F131FE000CA8396 /* SearchViewController.swift */,
 				6A9AB43D1F131FB200CA8396 /* RegisterViewController.swift */,
 				6A9D56661F0691B3009F77AD /* LoginViewController.swift */,
 				6A9D56681F077E01009F77AD /* LoginNavigationController.swift */,
