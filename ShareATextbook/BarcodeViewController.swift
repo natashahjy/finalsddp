@@ -12,6 +12,8 @@ class BarcodeViewController: UIViewController {
     @IBOutlet weak var barcodeTextField : UITextField!
     @IBOutlet weak var sizeSegment: UISegmentedControl!
     
+    var uploadItem : Upload!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -29,6 +31,7 @@ class BarcodeViewController: UIViewController {
     
     
     func prepareForSegue(segue:UIStoryboardSegue, sender:Any?) {
+        uploadItem.barcode = barcodeTextField.text
         if(segue.identifier == "addDetails"){
             let detailsVC = (segue.destination as! DetailsViewController)
             detailsVC.barcode = barcodeTextField.text
