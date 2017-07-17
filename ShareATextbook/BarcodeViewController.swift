@@ -20,7 +20,6 @@ class BarcodeViewController: UIViewController {
         print("barcode=\(barcodeTextField.text)")
         
     }
-    var uploadItem : Upload!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -37,13 +36,14 @@ class BarcodeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func prepareForSegue(segue:UIStoryboardSegue, sender:Any?) {
-        uploadItem.barcode = barcodeTextField.text
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if(segue.identifier == "addDetails"){
             let detailsVC = (segue.destination as! DetailsViewController)
             detailsVC.barcode = barcodeTextField.text
         }
     }
+    
     
     @IBAction func segmentChanged(sender: Any)
     {

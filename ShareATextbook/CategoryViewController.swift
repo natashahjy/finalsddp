@@ -57,7 +57,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         return pickerData[row]
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Preview" {
             let previewVC = segue.destination as! UploadViewController
             previewVC.barcode = barcode
@@ -68,7 +68,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             previewVC.category = category
         }
     }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
