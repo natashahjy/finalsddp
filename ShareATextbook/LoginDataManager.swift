@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class LoginDataManager {
     
-    class func loginUser(email: String, pass: String) -> Bool{
+    class func loginUser(email: String, pass: String, onComplete: @escaping (String, String, Bool) -> Void){
         
         var isLogin = false
         var token = ""
@@ -28,47 +29,85 @@ class LoginDataManager {
                 {
                     print(json!)
                     
-                    let nonce = (json!["nonce"].string)
-                    let encryptPass = SHA512.sha512Hex(string: (SHA512.sha512Hex(string: pass).uppercased() + nonce!)).uppercased()
-                
-                    let loginJson = JSON.init([
-                        "type" : "E",
-                        "email" : email,
-                        "password" : encryptPass
-                        ])
+                    if (json?["error"].exists())! {
+                        isLogin = false
+                        token = "loginFail"
+                        userId = "loginFail"
+                        onComplete(token, userId, isLogin)
+                    }
                     
-                    
-                    HTTP.postJSON(url: "http://13.228.39.122/FP04_523746827346837/1.0/user/login", json: loginJson, onComplete: {
-                        json, response, error in
+                    else {
                         
-                        if json != nil {
-                            print(json!)
+                        let nonce = (json!["nonce"].string)
+                        let encryptPass = SHA512.sha512Hex(string: (SHA512.sha512Hex(string: pass).uppercased() + nonce!)).uppercased()
+                        
+                        let loginJson = JSON.init([
+                            "type" : "E",
+                            "email" : email,
+                            "password" : encryptPass
+                            ])
+                        
+                        
+                        HTTP.postJSON(url: "http://13.228.39.122/FP04_523746827346837/1.0/user/login", json: loginJson, onComplete: {
+                            json, response, error in
                             
-                            if (json?["error"].exists())! {
-                                isLogin = false
-                                print("LOGIN FAIL")
+                            if json != nil {
+                                print(json!)
+                                
+                                if (json?["error"].exists())! {
+                                    isLogin = false
+                                    token = "loginFail"
+                                    userId = "loginFail"
+                                    onComplete(token, userId, isLogin)
+                                }
+                                    
+                                else {
+                                    isLogin = true
+                                    token = (json!["token"].string)!
+                                    userId = (json!["userid"].string)!
+                                    onComplete(token, userId, isLogin)
+                                }
+                                return
                             }
-                            
-                            else {
-                                isLogin = true
-                                token = (json!["token"].string)!
-                                userId = (json!["userid"].string)!
-                                print(token)
-                                print(userId)
-                            }
-                            // let saveToken: Bool = KeychainWrapper.standard.set(token, forKey: "sessionToken")
-                            // let saveUserId: Bool = KeychainWrapper.standard.set(userId, forKey: "userid")
-                            return
-                        }
-                        print(isLogin)
-                    })
+                        })
+                        
+                    }
+            
                     return
                 }
             })
             
         } // End of Dispatch Queue
+    }
+    
+    class func socialLogin(socialToken: String, onComplete: @escaping (String, String, Bool) -> Void) {
         
-        return isLogin
+        var isLogin = false
+        var token = ""
+        var userId = ""
+        
+        let json = JSON.init([
+            "type" : "F",
+            "token" : socialToken
+            ])
+        
+        DispatchQueue.global(qos: .background).async{
+            HTTP.postJSON(url: "http://13.228.39.122/FP04_523746827346837/1.0/user/login", json: json, onComplete: {
+                json, response, error in
+                
+                if json != nil {
+                    print(json!)
+                    isLogin = true
+                    token = (json!["token"].string)!
+                    userId = (json!["userid"].string)!
+                    onComplete(token, userId, isLogin)
+                }
+                
+            })
+            
+            return
+        } // End of Dispatch Queue
+        
     }
     
 }

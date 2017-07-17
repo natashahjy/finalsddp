@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HOME-->
         <scene sceneID="MTH-ne-Ish">
             <objects>
-                <viewController id="TnL-mZ-fiv" sceneMemberID="viewController">
+                <viewController id="TnL-mZ-fiv" customClass="HOME" customModule="ShareATextbook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z0h-Hy-izo"/>
                         <viewControllerLayoutGuide type="bottom" id="ZIA-Xx-9yn"/>

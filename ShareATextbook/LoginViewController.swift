@@ -15,12 +15,35 @@ class LoginViewController: UIViewController{
     @IBOutlet weak var passTF: DesignableTextField!
     @IBAction func registerBtn(_ sender: Any) {
     }
-    
     @IBAction func signInBtn(_ sender: Any) {
         emailLogin()
     }
+ 
+    func emailLogin () {
+        
+        let email = emailTF.text!
+        var pass = passTF.text!
+        
+        if Validation.loginScreen(email: email, pass: pass) {
+            
+                LoginDataManager.loginUser(email: email, pass: pass, onComplete: {
+                    (token, userId, isLogin) -> Void in
+                    
+                    LoginGlobalVar.token = token
+                    LoginGlobalVar.userId = userId
+                    
+                    if (isLogin) {
+                        DispatchQueue.main.async() {
+                            [unowned self] in
+                           self.performSegue(withIdentifier: "login", sender: self)
+                        }
+                    }
+            })
+        }
+    }
     
     @IBAction func fbLoginButton(_ sender: Any) {
+        
         FBSDKLoginManager().logIn(withReadPermissions: ["email", "public_profile"], from: self)
         { (result, error) in
             if error != nil {
@@ -30,39 +53,23 @@ class LoginViewController: UIViewController{
             
             let socialToken = result?.token.tokenString
             print(socialToken)
-            
-            let json = JSON.init([
-                "type" : "F",
-                "token" : socialToken
-                ])
-            
-            DispatchQueue.global(qos: .background).async{
-                HTTP.postJSON(url: "http://13.228.39.122/FP04_523746827346837/1.0/user/login", json: json, onComplete: {
-                    json, response, error in
+        
+                LoginDataManager.socialLogin(socialToken: socialToken!, onComplete: {
+                   (token, userId, isLogin) -> Void in
                     
-                    if json != nil {
-//                        print(error!)
-                        print(response!)
-                        print(json!)
+                    LoginGlobalVar.token = token
+                    LoginGlobalVar.userId = userId
+                    
+                    if (isLogin) {
+                        DispatchQueue.main.async() {
+                            [unowned self] in
+                            self.performSegue(withIdentifier: "login", sender: self)
+                        }
                     }
                     
                 })
-            } // End of Dispatch Queue
+                
             
-        }
-        
-    }
-    
-    // get nonce before calling user/login endpoint
-    func emailLogin() {
-        
-        let email = emailTF.text!
-        var pass = passTF.text!
-        
-        if Validation.loginScreen(email: email, pass: pass) {
-            
-            print(LoginDataManager.loginUser(email: email, pass: pass))
-          
         }
 
     }
