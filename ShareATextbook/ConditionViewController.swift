@@ -15,6 +15,13 @@ class ConditionViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     @IBOutlet weak var conditionPicker : UIPickerView!
     
+    @IBAction func confirmButton(_ sender: Any) {
+        UserDefaults.standard.string(forKey: barcode)
+        
+        print("barcode=\(barcode)")
+        
+    }
+    
     @IBAction func buttonPressed(sender: AnyObject) {
         let row = conditionPicker.selectedRow(inComponent: 0)
         let selected = pickerData[row]
@@ -53,7 +60,7 @@ class ConditionViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return pickerData[row]
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addCategory" {
             let categoryVC = segue.destination as! CategoryViewController
             categoryVC.barcode = barcode

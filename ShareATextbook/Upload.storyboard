@@ -638,6 +638,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="confirmButton:" destination="Mfk-TX-YLe" eventType="touchUpInside" id="uys-dC-Kad"/>
                                     <segue destination="cck-K3-wlv" kind="show" identifier="addDetails" id="sVQ-c6-xHs"/>
                                 </connections>
                             </button>
@@ -705,6 +706,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="barcodeTextField" destination="Mgv-CM-FTn" id="SDV-eO-Kf0"/>
+                        <outlet property="sizeSegment" destination="22H-1a-x4O" id="ryd-9d-al6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9s-rl-bNf" sceneMemberID="firstResponder"/>

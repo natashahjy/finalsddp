@@ -27,14 +27,14 @@ class DetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addCondition" {
             let conditionVC = segue.destination as! ConditionViewController
             conditionVC.barcode = barcode
             conditionVC.bookTitle = titleTextField.text
-            print(barcode)
         }
     }
+    
 
     /*
     // MARK: - Navigation

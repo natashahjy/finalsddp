@@ -32,10 +32,7 @@ class PreviewViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // barcodeLabel.text = barcode
-    
-    
-    func prepareForSegue(segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Upload" {
             let uploadVC = segue.destination as! UploadViewController
             uploadVC.barcode = barcode
@@ -44,6 +41,7 @@ class PreviewViewController: UIViewController {
             uploadVC.category = category
         }
     }
+
 
     /*
     // MARK: - Navigation
