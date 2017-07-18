@@ -54,6 +54,11 @@ class PreviewViewController: UIViewController{
             uploadVC.bookTitle = bookTitle
             uploadVC.condition = condition
             uploadVC.category = category
+            
+            var upload: Upload!
+            upload.barcode = barcode
+            upload.title = bookTitle
+            
         }
     }
 
