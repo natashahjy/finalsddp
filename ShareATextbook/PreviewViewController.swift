@@ -8,8 +8,8 @@
 
 import UIKit
 
-class PreviewViewController: UIViewController {
-
+class PreviewViewController: UIViewController{
+    
     var barcode: String!
     var bookTitle: String!
     var condition: String!
@@ -36,13 +36,17 @@ class PreviewViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.barcodeLabel.text = barcode
+        self.titleLabel.text = bookTitle
+        self.categoryLabel.text = category
+        self.conditionLabel.text = condition
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Upload" {
             let uploadVC = segue.destination as! UploadViewController
@@ -52,16 +56,5 @@ class PreviewViewController: UIViewController {
             uploadVC.category = category
         }
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
