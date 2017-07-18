@@ -30,7 +30,6 @@ class PreviewViewController: UIViewController {
         
         print("category=\(category)")
         
-        
     }
     
     override func viewDidLoad() {
