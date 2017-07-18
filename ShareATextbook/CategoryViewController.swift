@@ -19,6 +19,15 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     // Declare string array
     var pickerData: [String] = []
     
+    @IBAction func confirmButton(_ sender: Any) {
+        print("title=\(bookTitle)")
+        
+        print("barcode=\(barcode)")
+        
+        print("condition=\(condition)")
+        
+    }
+    
     @IBAction func buttonPressed(sender: AnyObject)
     {
         let row = categoryPicker.selectedRow(inComponent: 0)
@@ -59,7 +68,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Preview" {
-            let previewVC = segue.destination as! UploadViewController
+            let previewVC = segue.destination as! PreviewViewController
             previewVC.barcode = barcode
             previewVC.bookTitle = bookTitle
             previewVC.condition = condition
