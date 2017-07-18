@@ -16,9 +16,10 @@ class ConditionViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var conditionPicker : UIPickerView!
     
     @IBAction func confirmButton(_ sender: Any) {
-        UserDefaults.standard.string(forKey: barcode)
+        print("title=\(bookTitle)")
         
         print("barcode=\(barcode)")
+        
         
     }
     

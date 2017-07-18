@@ -21,6 +21,18 @@ class PreviewViewController: UIViewController {
     @IBOutlet weak var conditionLabel: UILabel!
     @IBOutlet weak var tagLabel: UILabel!
     
+    @IBAction func confirmButton(_ sender: Any) {
+        print("title=\(bookTitle)")
+        
+        print("barcode=\(barcode)")
+        
+        print("condition=\(condition)")
+        
+        print("category=\(category)")
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
