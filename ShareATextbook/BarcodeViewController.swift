@@ -12,10 +12,9 @@ class BarcodeViewController: UIViewController {
     @IBOutlet weak var barcodeTextField : UITextField!
     @IBOutlet weak var sizeSegment: UISegmentedControl!
     
+    var uploadItem : Upload!
+    
     @IBAction func confirmButton(_ sender: Any) {
-        let defaults = UserDefaults.standard
-        defaults.set(barcodeTextField.text, forKey: "barcodeTextField")
-        defaults.synchronize()
         
         print("barcode=\(barcodeTextField.text)")
         

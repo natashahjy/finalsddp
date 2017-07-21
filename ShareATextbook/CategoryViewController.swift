@@ -19,6 +19,15 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     // Declare string array
     var pickerData: [String] = []
     
+    @IBAction func confirmButton(_ sender: Any) {
+        print("title=\(bookTitle)")
+        
+        print("barcode=\(barcode)")
+        
+        print("condition=\(condition)")
+        
+    }
+    
     @IBAction func buttonPressed(sender: AnyObject)
     {
         let row = categoryPicker.selectedRow(inComponent: 0)
@@ -56,18 +65,6 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Preview" {
-            let previewVC = segue.destination as! UploadViewController
-            previewVC.barcode = barcode
-            previewVC.bookTitle = bookTitle
-            previewVC.condition = condition
-            //you can get selected value on pickerview
-            let category = String(pickerData[categoryPicker.selectedRow(inComponent: 0)])
-            previewVC.category = category
-        }
-    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,15 +77,16 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "Preview" {
+            let previewVC = segue.destination as! PreviewViewController
+            previewVC.barcode = barcode
+            previewVC.bookTitle = bookTitle
+            previewVC.condition = condition
+            //you can get selected value on pickerview
+            let category = String(pickerData[categoryPicker.selectedRow(inComponent: 0)])
+            previewVC.category = category
+        }
     }
-    */
 
 }

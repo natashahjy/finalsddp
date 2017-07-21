@@ -8,32 +8,27 @@
 
 import UIKit
 
-class UploadViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class UploadViewController: UIViewController {
     
     var barcode: String!
     var bookTitle: String!
     var condition: String!
     var category : String!
     
-    // Preview tableView
-    var uploadList : [Upload] = []
-    
-    @IBOutlet weak var tableView : UITableView!
+    @IBAction func confirmButton(_ sender: Any) {
+        print("title=\(bookTitle)")
+        
+        print("barcode=\(barcode)")
+        
+        print("condition=\(condition)")
+        
+        print("category=\(category)")
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-
-        /*
-        uploadList.append(Upload(barcode: "159-087-632",
-                                 category: "Primary",
-                                 title: "My Pals are Here Primary 1 Maths",
-                                 condition: "Good as New",
-                                 tag: "PrimaryOne"))
-        */
-        
-       // self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "PreviewCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,27 +36,7 @@ class UploadViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return uploadList.count
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: "PreviewCell", for: indexPath)
-        /*
-        let p = uploadList[indexPath.row]
-        
-        cell.barcodeLabel?.text = p.barcode
-        // cell.barcodeLabel?.text = barcode
-        cell.categoryLabel?.text = p.category
-        cell.titleLabel?.text = p.title
-        cell.conditionLabel?.text = p.condition
-        cell.tagLabel?.text = p.tag
-        */
-        return cell
-    }
-    
     /*
     // MARK: - Navigation
 

@@ -16,10 +16,9 @@ class ConditionViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var conditionPicker : UIPickerView!
     
     @IBAction func confirmButton(_ sender: Any) {
-        UserDefaults.standard.string(forKey: barcode)
+        print("title=\(bookTitle)")
         
         print("barcode=\(barcode)")
-        
     }
     
     @IBAction func buttonPressed(sender: AnyObject) {
@@ -82,15 +81,4 @@ class ConditionViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

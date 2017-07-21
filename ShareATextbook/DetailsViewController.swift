@@ -16,6 +16,14 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var coverPhoto: UIImageView!
     
+    @IBAction func confirmButton(_ sender: Any) {
+        
+        print("title=\(titleTextField.text)")
+        
+        print("barcode=\(barcode)")
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
