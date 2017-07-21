@@ -10,12 +10,12 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
-    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var nameField: DesignableTextField!
     @IBOutlet weak var passField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var phoneField: UITextField!
     @IBOutlet weak var passButton: UIButton!
-    @IBOutlet weak var nameDesignable: DesignableTextField!
+    
     var iconClick : Bool!
     
     @IBAction func buttonPressed(_ sender: Any) {
@@ -23,6 +23,7 @@ class RegisterViewController: UIViewController {
     }
 
     @IBAction func iconPressed(_ sender: Any) {
+        
         if(iconClick == true) {
             passField.isSecureTextEntry = true
             passButton.setImage(UIImage(named: "show")?.withRenderingMode(.alwaysOriginal), for: .normal)
