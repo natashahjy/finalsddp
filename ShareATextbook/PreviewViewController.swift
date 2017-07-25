@@ -58,7 +58,12 @@ class PreviewViewController: UIViewController{
             upload.barcode = barcode
             upload.title = bookTitle
             upload.categoryID = category
-            
+            upload.author = "Mr Tan"
+            upload.publisher = "Marshall Cavendish"
+            upload.edition = "1"
+            upload.desc = "Good as New"
+            upload.preferredLocation = "NTUC Branch"
+            upload.photo = ""
         }
     }
 

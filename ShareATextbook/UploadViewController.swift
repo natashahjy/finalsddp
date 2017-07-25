@@ -12,15 +12,12 @@ class UploadViewController: UIViewController {
     
     var barcode: String!
     var bookTitle: String!
-    var condition: String!
     var category : String!
     
     @IBAction func confirmButton(_ sender: Any) {
         print("title=\(bookTitle)")
         
         print("barcode=\(barcode)")
-        
-        print("condition=\(condition)")
         
         print("category=\(category)")
         
