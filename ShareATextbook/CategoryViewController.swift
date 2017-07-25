@@ -29,25 +29,6 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
     }
     
-    @IBAction func buttonPressed(sender: AnyObject)
-    {
-        let row = categoryPicker.selectedRow(inComponent: 0)
-        let selected = pickerData[row]
-        
-        let uiAlert = UIAlertController(
-            title: "You selected \(selected)",
-            message: "",
-            preferredStyle: UIAlertControllerStyle.alert)
-        
-        uiAlert.addAction(UIAlertAction( title: "Close",
-                                         style: .default,
-                                         handler: nil))
-        self.present(
-            uiAlert, animated: true, completion: nil)
-    }
-    
-    
-    
     func loadCategory()
     {
         UploadDataManager.category(limit: 10, name: "", heading: "", onComplete:
@@ -60,18 +41,8 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             {
                     self.categoryPicker.reloadAllComponents()
             }
-        }
-    )
-    
+        })
         
-    }
-    required init?(coder aDecoder: NSCoder) {
-        self.pickerData = [
-        "Primary",
-        "Secondary",
-        "Tertiary"]
-        
-        super.init(coder: aDecoder)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
