@@ -11,6 +11,7 @@ import UIKit
 class DetailsViewController: UIViewController {
 
     var barcode: String!
+    var uploadItem : Upload!
     
     @IBOutlet weak var titleTextField: UITextField!
     
@@ -36,10 +37,10 @@ class DetailsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addCondition" {
-            let conditionVC = segue.destination as! ConditionViewController
-            conditionVC.barcode = barcode
-            conditionVC.bookTitle = titleTextField.text
+        if segue.identifier == "addDesc" {
+            let descVC = segue.destination as! DescriptionViewController
+            descVC.barcode = barcode
+            descVC.bookTitle = titleTextField.text
         }
     }
     

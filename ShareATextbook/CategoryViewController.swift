@@ -18,6 +18,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     // Declare string array
     var pickerData: [String] = []
+    var categoryList: [Category] = []
     
     @IBAction func confirmButton(_ sender: Any) {
         print("title=\(bookTitle)")
@@ -45,6 +46,25 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             uiAlert, animated: true, completion: nil)
     }
     
+    
+    
+    func loadCategory()
+    {
+        UploadDataManager.category(limit: 10, name: "", heading: "", onComplete:
+        {
+            categoryList in
+            
+            self.categoryList = categoryList
+        
+            DispatchQueue.main.async
+            {
+                    self.categoryPicker.reloadAllComponents()
+            }
+        }
+    )
+    
+        
+    }
     required init?(coder aDecoder: NSCoder) {
         self.pickerData = [
         "Primary",
@@ -59,17 +79,18 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
+        return categoryList.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+        return categoryList[row].name
     }
         
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loadCategory()
     }
 
     override func didReceiveMemoryWarning() {

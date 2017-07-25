@@ -12,8 +12,6 @@ class BarcodeViewController: UIViewController {
     @IBOutlet weak var barcodeTextField : UITextField!
     @IBOutlet weak var sizeSegment: UISegmentedControl!
     
-    var uploadItem : Upload!
-    
     @IBAction func confirmButton(_ sender: Any) {
         
         print("barcode=\(barcodeTextField.text)")

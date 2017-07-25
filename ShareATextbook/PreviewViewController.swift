@@ -58,6 +58,7 @@ class PreviewViewController: UIViewController{
             var upload: Upload!
             upload.barcode = barcode
             upload.title = bookTitle
+            upload.categoryID = category
             
         }
     }
