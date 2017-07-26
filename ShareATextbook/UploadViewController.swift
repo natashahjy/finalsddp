@@ -14,15 +14,6 @@ class UploadViewController: UIViewController {
     var bookTitle: String!
     var category : String!
     
-    @IBAction func confirmButton(_ sender: Any) {
-        print("title=\(bookTitle)")
-        
-        print("barcode=\(barcode)")
-        
-        print("category=\(category)")
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

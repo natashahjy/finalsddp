@@ -164,7 +164,7 @@
         <!--Description-->
         <scene sceneID="58s-0J-ofD">
             <objects>
-                <viewController id="j8r-Tw-K5E" sceneMemberID="viewController">
+                <viewController id="j8r-Tw-K5E" customClass="DescriptionViewController" customModule="ShareATextbook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qhI-3E-udy"/>
                         <viewControllerLayoutGuide type="bottom" id="x2k-8x-CIK"/>

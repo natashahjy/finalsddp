@@ -76,7 +76,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             previewVC.bookTitle = bookTitle
             previewVC.condition = condition
             //you can get selected value on pickerview
-            let category = String(pickerData[categoryPicker.selectedRow(inComponent: 0)])
+            let category = String(categoryList[categoryPicker.selectedRow(inComponent: 0)].name)
             previewVC.category = category
         }
     }
