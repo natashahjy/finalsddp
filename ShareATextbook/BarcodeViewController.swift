@@ -11,12 +11,9 @@ import UIKit
 class BarcodeViewController: UIViewController {
     @IBOutlet weak var barcodeTextField : UITextField!
     @IBOutlet weak var sizeSegment: UISegmentedControl!
+    @IBOutlet var scanButton:UIButton!
     
-    @IBAction func confirmButton(_ sender: Any) {
-        
-        print("barcode=\(barcodeTextField.text)")
-        
-    }
+    var barcodeScanner:BarcodeScannerViewController?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -41,6 +38,28 @@ class BarcodeViewController: UIViewController {
         }
     }
     
+    @IBAction func scanClicked() {
+        barcodeScanner?.barcodeScanned =
+        {
+            (barcode:String) in
+        _ = self.navigationController?.popViewController(animated: true)
+        print("Received following barcode: \(barcode)")
+        
+            DispatchQueue.main.async {
+                self.barcodeTextField.text = "\(barcode)"
+            }
+        }
+        
+        if let barcodeScanner = self.barcodeScanner {
+            self.navigationController?.pushViewController(barcodeScanner, animated: true)
+        }
+    }
+    
+    @IBAction func confirmButton(_ sender: Any) {
+        
+        print("barcode=\(barcodeTextField.text)")
+        
+    }
     
     @IBAction func segmentChanged(sender: Any)
     {
