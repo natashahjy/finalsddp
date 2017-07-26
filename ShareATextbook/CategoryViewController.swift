@@ -15,6 +15,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var condition: String!
     
     @IBOutlet weak var categoryPicker : UIPickerView!
+    @IBOutlet weak var nextButton : UIButton!
     
     // Declare string array
     var pickerData: [String] = []
@@ -40,6 +41,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             DispatchQueue.main.async
             {
                     self.categoryPicker.reloadAllComponents()
+                    self.nextButton.isEnabled = true
             }
         })
         
