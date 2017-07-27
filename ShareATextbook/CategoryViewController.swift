@@ -15,9 +15,11 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var condition: String!
     
     @IBOutlet weak var categoryPicker : UIPickerView!
+    @IBOutlet weak var nextButton : UIButton!
     
     // Declare string array
     var pickerData: [String] = []
+    var categoryList: [Category] = []
     
     @IBAction func confirmButton(_ sender: Any) {
         print("title=\(bookTitle)")
@@ -28,30 +30,21 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
     }
     
-    @IBAction func buttonPressed(sender: AnyObject)
+    func loadCategory()
     {
-        let row = categoryPicker.selectedRow(inComponent: 0)
-        let selected = pickerData[row]
+        UploadDataManager.category(limit: 10, name: "", heading: "", onComplete:
+        {
+            categoryList in
+            
+            self.categoryList = categoryList
         
-        let uiAlert = UIAlertController(
-            title: "You selected \(selected)",
-            message: "",
-            preferredStyle: UIAlertControllerStyle.alert)
+            DispatchQueue.main.async
+            {
+                    self.categoryPicker.reloadAllComponents()
+                    self.nextButton.isEnabled = true
+            }
+        })
         
-        uiAlert.addAction(UIAlertAction( title: "Close",
-                                         style: .default,
-                                         handler: nil))
-        self.present(
-            uiAlert, animated: true, completion: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        self.pickerData = [
-        "Primary",
-        "Secondary",
-        "Tertiary"]
-        
-        super.init(coder: aDecoder)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -59,17 +52,18 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
+        return categoryList.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+        return categoryList[row].name
     }
         
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loadCategory()
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,7 +78,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             previewVC.bookTitle = bookTitle
             previewVC.condition = condition
             //you can get selected value on pickerview
-            let category = String(pickerData[categoryPicker.selectedRow(inComponent: 0)])
+            let category = String(categoryList[categoryPicker.selectedRow(inComponent: 0)].name)
             previewVC.category = category
         }
     }

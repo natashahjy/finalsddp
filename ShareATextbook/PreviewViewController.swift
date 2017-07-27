@@ -52,13 +52,18 @@ class PreviewViewController: UIViewController{
             let uploadVC = segue.destination as! UploadViewController
             uploadVC.barcode = barcode
             uploadVC.bookTitle = bookTitle
-            uploadVC.condition = condition
             uploadVC.category = category
             
             var upload: Upload!
             upload.barcode = barcode
             upload.title = bookTitle
-            
+            upload.categoryID = category
+            upload.author = "Mr Tan"
+            upload.publisher = "Marshall Cavendish"
+            upload.edition = "1"
+            upload.desc = "Good as New"
+            upload.preferredLocation = "NTUC Branch"
+            upload.photo = ""
         }
     }
 

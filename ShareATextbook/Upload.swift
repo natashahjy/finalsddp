@@ -23,20 +23,5 @@ class Upload: NSObject {
     var edition : String! = ""
     var photo : String! = ""
     var preferredLocation : String! = ""
-   
-    /*
-    init(barcode: String,
-         category: String,
-         title: String,
-         condition: String,
-         tag: String)
-    {
-        self.barcode = barcode
-        self.category = category
-        self.title = title
-        self.condition = condition
-        self.tag = tag
-        super.init()
-    }
-    */
+    
 }
