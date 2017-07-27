@@ -9,7 +9,28 @@
 import UIKit
 
 class ISBN: NSObject {
+   
     var id : String = ""
     var name : String = ""
-    var limit : String = ""
+    var publisher : String = ""
+    var edition : String = ""
+    var author : String = ""
+    var cateid : String = ""
+    
+    init(id: String,
+         name: String,
+         publisher:String,
+         edition: String,
+         author:String,
+         cateid: String){
+        
+        self.id = id
+        self.name = name
+        self.publisher = publisher
+        self.edition = edition
+        self.author = author
+        self.cateid = cateid
+        
+        super.init()
+    }
 }

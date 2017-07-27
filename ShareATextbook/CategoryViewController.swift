@@ -32,7 +32,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     func loadCategory()
     {
-        UploadDataManager.category(limit: 10, name: "", heading: "", onComplete:
+        CategoryDataManager.category(limit: 10, name: "", heading: "", onComplete:
         {
             categoryList in
             
