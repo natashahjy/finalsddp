@@ -12,21 +12,19 @@ class PreviewViewController: UIViewController{
     
     var barcode: String!
     var bookTitle: String!
-    var condition: String!
     var category : String!
+    var desc: String!
     
     @IBOutlet weak var barcodeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var conditionLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var tagLabel: UILabel!
     
     @IBAction func confirmButton(_ sender: Any) {
         print("title=\(bookTitle)")
         
         print("barcode=\(barcode)")
-        
-        print("condition=\(condition)")
         
         print("category=\(category)")
         
@@ -39,12 +37,16 @@ class PreviewViewController: UIViewController{
         self.barcodeLabel.text = barcode
         self.titleLabel.text = bookTitle
         self.categoryLabel.text = category
-        self.conditionLabel.text = condition
+        self.descLabel.text = description
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func upload(){
+        UploadDataManager.upload(token: "", catID: "", bookTitle: titleLabel.text!, isbn: barcodeLabel.text!, desc: "", author: "", publisher: "", edition: "", photos: "", preferredLoc: "")
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -31,6 +31,7 @@ class DescriptionViewController: UIViewController {
             let categoryVC = segue.destination as! CategoryViewController
             categoryVC.barcode = barcode
             categoryVC.bookTitle = bookTitle
+            categoryVC.desc = ""
         }
     }
 }

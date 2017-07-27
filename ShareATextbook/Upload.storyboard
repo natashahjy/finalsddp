@@ -303,25 +303,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TF4-WM-aAU">
-                                <rect key="frame" x="0.0" y="353" width="375" height="46"/>
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.28627450980000002" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="wVa-D8-YVJ"/>
-                                </constraints>
-                                <state key="normal" title="Upload">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="confirmButton:" destination="G8F-w6-hTJ" eventType="touchUpInside" id="h0L-aa-q6m"/>
-                                    <segue destination="BPM-iK-czx" kind="show" identifier="Upload" id="6LM-0k-1ue"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0Yj-G1-i8R">
                                 <rect key="frame" x="16" y="93" width="343" height="224"/>
                                 <subviews>
@@ -407,7 +388,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="nub-Ng-EIr">
                                         <rect key="frame" x="0.0" y="150" width="343" height="36.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVp-4g-rfX">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVp-4g-rfX">
                                                 <rect key="frame" x="10" y="8" width="323" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -437,21 +418,39 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TF4-WM-aAU">
+                                <rect key="frame" x="0.0" y="386" width="375" height="46"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.28627450980000002" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="wVa-D8-YVJ"/>
+                                </constraints>
+                                <state key="normal" title="Upload">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="confirmButton:" destination="G8F-w6-hTJ" eventType="touchUpInside" id="h0L-aa-q6m"/>
+                                    <segue destination="BPM-iK-czx" kind="show" identifier="Upload" id="6LM-0k-1ue"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TF4-WM-aAU" firstAttribute="leading" secondItem="UPM-lk-hx9" secondAttribute="leadingMargin" id="CuQ-Ov-OFq"/>
-                            <constraint firstItem="aaM-dV-cfB" firstAttribute="top" secondItem="TF4-WM-aAU" secondAttribute="bottom" constant="224" id="EED-cD-rBz"/>
-                            <constraint firstItem="TF4-WM-aAU" firstAttribute="trailing" secondItem="0Yj-G1-i8R" secondAttribute="trailing" id="aSA-T1-p8u"/>
-                            <constraint firstItem="TF4-WM-aAU" firstAttribute="leading" secondItem="0Yj-G1-i8R" secondAttribute="leading" id="aWD-O9-aku"/>
-                            <constraint firstItem="TF4-WM-aAU" firstAttribute="top" secondItem="0Yj-G1-i8R" secondAttribute="bottom" constant="36" id="hYF-2i-Nmc"/>
+                            <constraint firstItem="TF4-WM-aAU" firstAttribute="leading" secondItem="UPM-lk-hx9" secondAttribute="leading" id="3YK-z2-4Ii"/>
+                            <constraint firstItem="TF4-WM-aAU" firstAttribute="centerX" secondItem="0Yj-G1-i8R" secondAttribute="centerX" id="LIr-0C-SKb"/>
+                            <constraint firstItem="TF4-WM-aAU" firstAttribute="top" secondItem="0Yj-G1-i8R" secondAttribute="bottom" constant="69" id="alh-ft-5jm"/>
+                            <constraint firstItem="aaM-dV-cfB" firstAttribute="top" secondItem="TF4-WM-aAU" secondAttribute="bottom" constant="191" id="cK5-nr-UC1"/>
+                            <constraint firstAttribute="trailing" secondItem="TF4-WM-aAU" secondAttribute="trailing" id="e5B-hU-Wp2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Preview" id="zLw-2g-2fI"/>
                     <connections>
                         <outlet property="barcodeLabel" destination="fgR-wY-SJB" id="jhw-BH-vHN"/>
                         <outlet property="categoryLabel" destination="dU2-BX-JZz" id="8k8-Gs-mrR"/>
-                        <outlet property="conditionLabel" destination="rVp-4g-rfX" id="PNO-Fv-xym"/>
                         <outlet property="tagLabel" destination="Q4i-XJ-9vZ" id="PHc-uM-7ba"/>
                         <outlet property="titleLabel" destination="5G0-bP-VJ0" id="lC2-rx-SgG"/>
                     </connections>
