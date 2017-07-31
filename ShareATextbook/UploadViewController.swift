@@ -14,18 +14,26 @@ class UploadViewController: UIViewController {
     var bookTitle: String!
     var category : String!
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var barcodeLabel: UILabel!
-    @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var tagsLabel: UILabel!
+    var upload: Upload!
+
+    var uploadList : [Upload] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let dateResult = formatter.string(from: date)
+        
+        // dateLabel.text = dateResult
+        
 
     }
 
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

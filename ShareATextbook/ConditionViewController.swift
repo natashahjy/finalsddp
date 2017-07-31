@@ -66,7 +66,7 @@ class ConditionViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             categoryVC.bookTitle = bookTitle
             //you can get selected value on pickerview
             let condition = String(pickerData[conditionPicker.selectedRow(inComponent: 0)])
-            categoryVC.condition = condition
+           // categoryVC.condition = condition
         }
     }
     
