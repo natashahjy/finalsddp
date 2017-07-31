@@ -76,7 +76,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             let previewVC = segue.destination as! PreviewViewController
             previewVC.barcode = barcode
             previewVC.bookTitle = bookTitle
-            previewVC.desc = ""
+            previewVC.desc = desc
             //you can get selected value on pickerview
             let category = String(categoryList[categoryPicker.selectedRow(inComponent: 0)].name)
             previewVC.category = category

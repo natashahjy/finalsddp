@@ -37,7 +37,7 @@ class PreviewViewController: UIViewController{
         self.barcodeLabel.text = barcode
         self.titleLabel.text = bookTitle
         self.categoryLabel.text = category
-        self.descLabel.text = description
+        self.descLabel.text = desc
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,16 +46,18 @@ class PreviewViewController: UIViewController{
     }
     
     func upload(){
-        UploadDataManager.upload(token: "", catID: "", bookTitle: titleLabel.text!, isbn: barcodeLabel.text!, desc: "", author: "", publisher: "", edition: "", photos: "", preferredLoc: "")
+        UploadDataManager.upload(token: LoginGlobalVar.token, catID: category, bookTitle: titleLabel.text!, isbn: barcodeLabel.text!, desc: desc, author: "", publisher: "", edition: "", photos: "", preferredLoc: "")
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Upload" {
+          /*
             let uploadVC = segue.destination as! UploadViewController
             uploadVC.barcode = barcode
             uploadVC.bookTitle = bookTitle
             uploadVC.category = category
-            
+            */
+            upload()
             var upload: Upload!
             upload.barcode = barcode
             upload.title = bookTitle
