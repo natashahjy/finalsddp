@@ -14,6 +14,13 @@ class UploadViewController: UIViewController {
     var bookTitle: String!
     var category : String!
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var barcodeLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var tagsLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
