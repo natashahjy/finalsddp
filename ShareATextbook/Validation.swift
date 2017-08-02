@@ -36,7 +36,10 @@ class Validation {
     static private let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
     static private let regexNameType = "^[a-zA-Z]+$"
     static private let regexPhoneType = "^[9|8][0-9]{7}$"
-    static private let regexPass = "^(?=.*[A-Z])(?=.*[0-9]).{8}$"
+    static private let regexPass = "^(?=.*[A-Z])(?=.*[0-9]).{6,}$"
+    static private let regexPassUppercase = "^(.*[A-Z].*)$"
+    static private let regexPassSix = "^.{6,}$"
+    static private let regexPassNum = "^(.*[0-9].*)$"
     
     class func isValidEmail(testStr:String) -> Bool {
         // print("validate calendar: \(testStr)")
@@ -67,7 +70,27 @@ class Validation {
     class func isValidPass(testStr:String) -> Bool {
         // print("validate calendar: \(testStr)")
         
-        let passTest = NSPredicate(format:"SELF MATCHES %@", regexNameType)
+        let passTest = NSPredicate(format:"SELF MATCHES %@", regexPass)
+        return passTest.evaluate(with: testStr)
+    }
+    
+    class func isValidPassUppercase(testStr:String) -> Bool {
+        // print("validate calendar: \(testStr)")
+        
+        let passTest = NSPredicate(format:"SELF MATCHES %@", regexPassUppercase)
+        return passTest.evaluate(with: testStr)
+        
+    }
+    class func isValidPassSix(testStr:String) -> Bool {
+        // print("validate calendar: \(testStr)")
+        
+        let passTest = NSPredicate(format:"SELF MATCHES %@", regexPassSix)
+        return passTest.evaluate(with: testStr)
+    }
+    class func isValidPassNum(testStr:String) -> Bool {
+        // print("validate calendar: \(testStr)")
+        
+        let passTest = NSPredicate(format:"SELF MATCHES %@", regexPassNum)
         return passTest.evaluate(with: testStr)
     }
     

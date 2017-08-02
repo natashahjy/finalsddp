@@ -1,20 +1,77 @@
-//
-//  HomeViewController.swift
+ //
+//  HOME.swift
 //  ShareATextbook
 //
-//  Created by ITP312 on 6/6/17.
+//  Created by Ryuichi Chua on 17/7/17.
 //  Copyright © 2017 natashahjy. All rights reserved.
+//
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
-    @IBOutlet weak var navBar: UINavigationBar!
-    @IBOutlet weak var sizeSegment: UISegmentedControl!
+class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
+    @IBOutlet weak var postingCollectionView: UICollectionView!
+    
+    var postList : [Posting] = []
+    let numberOfCellsPerRow: CGFloat = 2.0
+    let leftAndRightPaddings: CGFloat = 1.0
+    
+    func loadFeed() {
+        PostingDataManager.listAllPostings(onComplete: {
+            postings in
+            
+            self.postList = postings
+            
+            DispatchQueue.main.async {
+                self.postingCollectionView.reloadData()
+            }
+            
+        })
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.postList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = postingCollectionView.dequeueReusableCell(withReuseIdentifier: "postingCell", for: indexPath) as? PostingCollectionViewCell else { return UICollectionViewCell() }
+        let post = postList[indexPath.row]
+        cell.postingName!.text = post.name
+        cell.postingTitle!.text = post.by
+        cell.postingDate!.text = post.postdts
+        cell.postingImg.image = UIImage(named: String(indexPath.row))
+        cell.postingId = post.postingId
+        return cell
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        
+//        let layout = collectionViewLayout as! UICollectionViewFlowLayout
+//        layout.minimumLineSpacing = 5.0
+//        layout.minimumInteritemSpacing = 2.5
+//        let numberOfItemsPerRow: CGFloat = 2.0
+//        let itemWidth = (collectionView.bounds.width - layout.minimumLineSpacing) / numberOfItemsPerRow
+//
+//        return CGSize(width: itemWidth, height: itemWidth)
+//    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let collectionViewWidth = postingCollectionView?.frame.width
+        let collectionViewHeight = postingCollectionView?.frame.height
+        let itemWidth = (collectionViewWidth! - leftAndRightPaddings) / numberOfCellsPerRow
+        let layout = postingCollectionView?.collectionViewLayout as! UICollectionViewFlowLayout
+        self.postingCollectionView.contentInset = UIEdgeInsets(top: -40, left: 0, bottom: 0, right: 0)
+        self.postingCollectionView.scrollIndicatorInsets = UIEdgeInsets.zero
+        //self.postingCollectionView.inset
+        layout.itemSize = CGSize(width: itemWidth, height: collectionViewHeight!/2)
+        loadFeed()
         // Do any additional setup after loading the view.
     }
 
@@ -23,33 +80,6 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func segmentChanged(sender: Any)
-    {
-        if (sizeSegment.selectedSegmentIndex == 0)
-        {
-            let storyboard = UIStoryboard(name: "Favourites", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
-            
-            self.present(controller, animated:true, completion:nil)
-        }
-        
-        if (sizeSegment.selectedSegmentIndex == 1)
-        {
-            let storyboard = UIStoryboard(name: "Home", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "InitialController") as UIViewController
-            
-            self.present(controller, animated:true, completion:nil)
-        }
-        
-        if (sizeSegment.selectedSegmentIndex == 2)
-        {
-            let storyboard = UIStoryboard(name: "Upload", bundle: nil)
-            let navcontroller = storyboard.instantiateViewController(withIdentifier: "NavViewController") as UIViewController
-            
-            self.present(navcontroller, animated:true, completion:nil)
-
-        }
-    }
 
     /*
     // MARK: - Navigation
