@@ -12,7 +12,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
     var barcode: String!
     var bookTitle: String!
-    var condition: String!
+    var desc: String!
     
     @IBOutlet weak var categoryPicker : UIPickerView!
     @IBOutlet weak var nextButton : UIButton!
@@ -26,13 +26,13 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         print("barcode=\(barcode)")
         
-        print("condition=\(condition)")
+        print("desc=\(desc)")
         
     }
     
     func loadCategory()
     {
-        UploadDataManager.category(limit: 10, name: "", heading: "", onComplete:
+        CategoryDataManager.category(limit: 10, name: "", heading: "", onComplete:
         {
             categoryList in
             
@@ -76,7 +76,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             let previewVC = segue.destination as! PreviewViewController
             previewVC.barcode = barcode
             previewVC.bookTitle = bookTitle
-            previewVC.condition = condition
+            previewVC.desc = desc
             //you can get selected value on pickerview
             let category = String(categoryList[categoryPicker.selectedRow(inComponent: 0)].name)
             previewVC.category = category

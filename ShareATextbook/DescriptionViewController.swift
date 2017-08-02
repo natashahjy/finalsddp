@@ -13,11 +13,14 @@ class DescriptionViewController: UIViewController {
     var barcode: String!
     var bookTitle: String!
 
+    @IBOutlet weak var descTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        var upload = Upload()
+        upload.desc = descTextView!.text
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +34,7 @@ class DescriptionViewController: UIViewController {
             let categoryVC = segue.destination as! CategoryViewController
             categoryVC.barcode = barcode
             categoryVC.bookTitle = bookTitle
+            categoryVC.desc = descTextView!.text
         }
     }
 }
