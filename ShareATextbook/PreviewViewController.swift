@@ -14,12 +14,20 @@ class PreviewViewController: UIViewController{
     var bookTitle: String!
     var category : String!
     var desc: String!
+    var author: String!
+    var publisher: String!
+    var edition: String!
+    var cateID: String!
+    var cateID2: String!
+    var categoryIDs: [String] = []
     
     @IBOutlet weak var barcodeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
-    @IBOutlet weak var tagLabel: UILabel!
+    @IBOutlet weak var editionLabel: UILabel!
+    @IBOutlet weak var publisherLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
     
     @IBAction func confirmButton(_ sender: Any) {
         print("title=\(bookTitle)")
@@ -28,6 +36,13 @@ class PreviewViewController: UIViewController{
         
         print("category=\(category)")
         
+        print("author=\(author)")
+        print("publisher=\(publisher)")
+        print("cate ID=\(cateID)")
+        print("desc=\(desc)")
+        print("edition=\(edition)")
+        
+        upload()
     }
     
     override func viewDidLoad() {
@@ -38,6 +53,12 @@ class PreviewViewController: UIViewController{
         self.titleLabel.text = bookTitle
         self.categoryLabel.text = category
         self.descLabel.text = desc
+        self.editionLabel.text = edition
+        self.authorLabel.text = author
+        self.publisherLabel.text = publisher
+        categoryIDs.append(cateID)
+        categoryIDs.append(cateID2)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +67,17 @@ class PreviewViewController: UIViewController{
     }
     
     func upload(){
-        UploadDataManager.upload(token: LoginGlobalVar.token, catID: category, bookTitle: titleLabel.text!, isbn: barcodeLabel.text!, desc: desc, author: "", publisher: "", edition: "", photos: "", preferredLoc: "")
+        UploadDataManager.upload(token: LoginGlobalVar.token,
+                                 catID: categoryIDs,
+                                 bookTitle: titleLabel.text!,
+                                 isbn: barcodeLabel.text!,
+                                 desc: descLabel.text!,
+                                 author: authorLabel.text!,
+                                 publisher: publisherLabel.text!,
+                                 edition: editionLabel.text!,
+                                 photos: "",
+                                 preferredLoc: "")
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,18 +87,11 @@ class PreviewViewController: UIViewController{
             uploadVC.barcode = barcode
             uploadVC.bookTitle = bookTitle
             uploadVC.category = category
-            */
-            self.upload()
-            var upload: Upload!
-            upload.barcode = barcode
-            upload.title = bookTitle
-            upload.categoryID = category
-            upload.author = "Mr Tan"
-            upload.publisher = "Marshall Cavendish"
-            upload.edition = "1"
-            upload.desc = "Good as New"
-            upload.preferredLocation = "NTUC Branch"
-            upload.photo = ""
+            uploadVC.author = author
+            uploadVC.publisher = publisher
+            uploadVC.edition = edition
+            uploadVC.desc = desc
+             */
         }
     }
 

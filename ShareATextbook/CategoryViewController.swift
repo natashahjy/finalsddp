@@ -13,13 +13,40 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var barcode: String!
     var bookTitle: String!
     var desc: String!
+    var author: String!
+    var publisher: String!
     
     @IBOutlet weak var categoryPicker : UIPickerView!
     @IBOutlet weak var nextButton : UIButton!
+    @IBOutlet weak var editionTextField: UITextField!
     
     // Declare string array
-    var pickerData: [String] = []
     var categoryList: [Category] = []
+    var categoryList2: [Category] = []
+    
+    @IBAction func selectButton(sender: AnyObject){
+        let row = categoryPicker.selectedRow(inComponent: 0)
+        
+        let selected = categoryList[row].name
+        let selected2 = categoryList2[row].name
+        
+        let uiAlert = UIAlertController(
+            title: "You selected \(selected) \(selected2)",
+            message: "Click to dismiss",
+            preferredStyle:UIAlertControllerStyle.alert)
+        
+        
+        uiAlert.addAction(UIAlertAction(
+            title: "Dismiss",
+            style: .default,
+            handler: nil))
+        
+        self.present(
+            uiAlert, animated: true,
+            completion: nil)
+        print("category=\(selected)")
+        print("category=\(selected2)")
+    }
     
     @IBAction func confirmButton(_ sender: Any) {
         print("title=\(bookTitle)")
@@ -27,6 +54,10 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         print("barcode=\(barcode)")
         
         print("desc=\(desc)")
+        
+        print("author=\(author)")
+        
+        print("publisher=\(publisher)")
         
     }
     
@@ -37,6 +68,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             categoryList in
             
             self.categoryList = categoryList
+            self.categoryList2 = categoryList
         
             DispatchQueue.main.async
             {
@@ -48,15 +80,29 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return 2
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return categoryList.count
+        if component == 0
+        {
+            return categoryList.count
+        }
+        else
+        {
+            return categoryList2.count
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return categoryList[row].name
+        if component == 0
+        {
+            return categoryList[row].name
+        }
+        else
+        {
+            return categoryList2[row].name
+        }
     }
         
     override func viewDidLoad() {
@@ -77,9 +123,18 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             previewVC.barcode = barcode
             previewVC.bookTitle = bookTitle
             previewVC.desc = desc
+            previewVC.author = author
+            previewVC.publisher = publisher
+            
             //you can get selected value on pickerview
             let category = String(categoryList[categoryPicker.selectedRow(inComponent: 0)].name)
+            let categoryId = String(categoryList[categoryPicker.selectedRow(inComponent: 0)].id)
+            let categoryId2 = String(categoryList2[categoryPicker.selectedRow(inComponent: 0)].id)
             previewVC.category = category
+            previewVC.cateID = categoryId
+            previewVC.cateID2 = categoryId2
+            previewVC.edition = editionTextField!.text
+            
         }
     }
 

@@ -13,7 +13,7 @@ class UploadDataManager: NSObject {
     
      
     class func upload(token: String,
-                      catID: String,
+                      catID: [String],
                       bookTitle: String,
                       isbn: String,
                       desc: String,
@@ -26,15 +26,15 @@ class UploadDataManager: NSObject {
         let url = "http://13.228.39.122/FP04_523746827346837/1.0/posting/add"
         let json = JSON.init([
             "token" : token,
-            "catid" : catID,
+            "cateid" : catID,
             "name" : bookTitle,
             "isbn" : isbn,
             "desc" : desc,
             "author" : author,
             "publisher" : publisher,
             "edition" : edition,
-            "photos" : photos,
-            "preferredLoc" : preferredLoc
+            "photos" : [""],
+            "preferredLoc" : ""
             ])
         
         
