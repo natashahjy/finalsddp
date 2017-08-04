@@ -14,7 +14,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var postList : [Posting] = []
     let numberOfCellsPerRow: CGFloat = 2.0
-    let leftAndRightPaddings: CGFloat = 1.0
+    let leftAndRightPaddings: CGFloat = 2.0
     
     func loadFeed() {
         PostingDataManager.listAllPostings(onComplete: {
@@ -48,18 +48,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        
-//        let layout = collectionViewLayout as! UICollectionViewFlowLayout
-//        layout.minimumLineSpacing = 5.0
-//        layout.minimumInteritemSpacing = 2.5
-//        let numberOfItemsPerRow: CGFloat = 2.0
-//        let itemWidth = (collectionView.bounds.width - layout.minimumLineSpacing) / numberOfItemsPerRow
-//
-//        return CGSize(width: itemWidth, height: itemWidth)
-//    }
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,9 +55,6 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         let collectionViewHeight = postingCollectionView?.frame.height
         let itemWidth = (collectionViewWidth! - leftAndRightPaddings) / numberOfCellsPerRow
         let layout = postingCollectionView?.collectionViewLayout as! UICollectionViewFlowLayout
-        self.postingCollectionView.contentInset = UIEdgeInsets(top: -40, left: 0, bottom: 0, right: 0)
-        self.postingCollectionView.scrollIndicatorInsets = UIEdgeInsets.zero
-        //self.postingCollectionView.inset
         layout.itemSize = CGSize(width: itemWidth, height: collectionViewHeight!/2)
         loadFeed()
         // Do any additional setup after loading the view.

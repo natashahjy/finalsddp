@@ -11,7 +11,7 @@ import Foundation
 class PostingDataManager {
     
     
-    class func createPostings(token: String) {
+    class func createDummyPostings(token: String) {
         
         let json = JSON.init([
     
@@ -65,7 +65,7 @@ class PostingDataManager {
             
             "page" : "0",
             
-            "isavailable" : "",
+            "isavailable" : "Y",
             
             "limit" : "12",
             

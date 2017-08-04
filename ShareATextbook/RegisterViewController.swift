@@ -49,28 +49,28 @@ class RegisterViewController: UIViewController {
         
         if Validation.isValidPass(testStr: pass) {
             passField.rightImage = UIImage(named: "checked")
-            passErrLblSix.textColor = UIColor.green
-            passErrLbl.textColor = UIColor.green
-            PassErrLblNum.textColor = UIColor.green
+            passErrLblSix.textColor = UIColor(red: 0/255, green: 178/255, blue: 0/255, alpha: 1)
+            passErrLbl.textColor = UIColor(red: 0/255, green: 178/255, blue: 0/255, alpha: 1)
+            PassErrLblNum.textColor = UIColor(red: 0/255, green: 178/255, blue: 0/255, alpha: 1)
             textFieldHelper.removeErrorHighlightTextField(textField: passField)
         } else {
             passField.rightImage = UIImage(named: "valErr")
             textFieldHelper.errorHighlightTextField(textField: passField)
             
             if Validation.isValidPassUppercase(testStr: pass) {
-                passErrLbl.textColor = UIColor.green
+                passErrLbl.textColor = UIColor(red: 0/255, green: 178/255, blue: 0/255, alpha: 1)
             } else {
                 passErrLbl.textColor = UIColor.red
             }
             
             if Validation.isValidPassNum(testStr: pass) {
-                PassErrLblNum.textColor = UIColor.green
+                PassErrLblNum.textColor = UIColor(red: 0/255, green: 178/255, blue: 0/255, alpha: 1)
             } else {
                 PassErrLblNum.textColor = UIColor.red
             }
             
             if Validation.isValidPassSix(testStr: pass) {
-                passErrLblSix.textColor = UIColor.green
+                passErrLblSix.textColor = UIColor(red: 0/255, green: 178/255, blue: 0/255, alpha: 1)
             } else {
                 passErrLblSix.textColor = UIColor.red
             }

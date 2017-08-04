@@ -198,7 +198,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.63137254901960782" green="0.63137254901960782" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8Ih-EJ-wT8" firstAttribute="top" secondItem="1u4-4e-V8x" secondAttribute="bottom" constant="5" id="36w-Xv-LMD"/>
                             <constraint firstItem="UD2-xT-a2u" firstAttribute="centerX" secondItem="qwo-zL-HGb" secondAttribute="centerX" id="4DJ-L4-QCB"/>
@@ -332,7 +332,7 @@
                                     <segue destination="i1C-Qa-u2N" kind="show" id="xsD-3c-ayp"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Po-nT-8SS" customClass="DesignableTextField" customModule="ShareATextbook" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Po-nT-8SS" customClass="DesignableTextField" customModule="ShareATextbook" customModuleProvider="target">
                                 <rect key="frame" x="27.5" y="282" width="320" height="40"/>
                                 <color key="backgroundColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.40784313725490196" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -352,7 +352,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G91-2h-dUb" customClass="DesignableTextField" customModule="ShareATextbook" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ryu123@gmail.com" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G91-2h-dUb" customClass="DesignableTextField" customModule="ShareATextbook" customModuleProvider="target">
                                 <rect key="frame" x="27.5" y="222" width="320" height="40"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

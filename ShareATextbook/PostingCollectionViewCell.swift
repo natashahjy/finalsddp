@@ -20,6 +20,5 @@ class PostingCollectionViewCell: UICollectionViewCell {
     
     @IBAction func reserveButton(_ sender: Any){
         RequestDataManager.requestPosting(token: LoginGlobalVar.token, postingId: postingId)
-        print(postingId)
     }
 }

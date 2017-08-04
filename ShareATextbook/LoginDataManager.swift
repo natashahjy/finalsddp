@@ -95,8 +95,14 @@ class LoginDataManager {
             HTTP.postJSON(url: "http://13.228.39.122/FP04_523746827346837/1.0/user/login", json: json, onComplete: {
                 json, response, error in
                 
-                if json != nil {
-                    print(json!)
+                if (json?["error"].exists())! {
+                    isLogin = false
+                    token = "loginFail"
+                    userId = "loginFail"
+                    onComplete(token, userId, isLogin)
+                }
+                    
+                else {
                     isLogin = true
                     token = (json!["token"].string)!
                     userId = (json!["userid"].string)!
