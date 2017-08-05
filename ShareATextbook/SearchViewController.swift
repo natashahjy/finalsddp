@@ -30,7 +30,7 @@ class SearchViewController: UITableViewController {
     func loadListing()
     {
         PostingDataManager.listAllPostings(onComplete: {
-            positings in
+            listings in
             self.listing = listings
             
             DispatchQueue.main.async {
