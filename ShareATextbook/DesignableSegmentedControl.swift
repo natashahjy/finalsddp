@@ -75,7 +75,7 @@ class DesignableSegmentedControl: UIControl {
         
         buttons[0].setTitleColor(selectorTextColour , for: .normal)
         
-        let selectorWidth = (frame.width + 40) / CGFloat(buttonTitles.count)
+        let selectorWidth = (frame.width) / CGFloat(buttonTitles.count)
         selector = UIView(frame: CGRect(x: 0, y: (frame.height - 6), width: selectorWidth, height: 6))
         selector.backgroundColor = selectorColour
         addSubview(selector)

@@ -15,5 +15,6 @@ class Posting: NSObject {
     var by: String = ""
     var postdts: String = ""
     var image: String = ""
+    
 
 }

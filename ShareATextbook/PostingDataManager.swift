@@ -88,6 +88,7 @@ class PostingDataManager {
                         post.by = (json![i]["by"].string)!
                         post.postdts = (json![i]["postdts"].string)!
                         post.postingId = (json![i]["id"].string)!
+                        
 //                        post.image = (json![i]["photos"].string)!
                         
                         postingList.append(post)
