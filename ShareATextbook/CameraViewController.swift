@@ -53,6 +53,13 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             picker, animated: true)
     }
     
+    func convertImageToBase64(image: UIImage) -> String {
+        var imageData = UIImagePNGRepresentation(image)
+        let base64String = imageData?.base64EncodedString()
+        return base64String!
+        
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let chosenImage : UIImage = info[UIImagePickerControllerEditedImage] as! UIImage
         self.imageView!.image = chosenImage
