@@ -10,6 +10,13 @@ import UIKit
 
 class ProfilePostCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var status: UILabel!
+    
+//    var image: UIImage! {
+//        didSet {
+//            self.imageView.image = image
+//            self.setNeedsLayout()
+//        }
+//    }
 }

@@ -10,4 +10,7 @@ import UIKit
 
 class PostingTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+
+    
 }
