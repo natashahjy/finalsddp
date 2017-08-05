@@ -498,15 +498,28 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Wcg-rp-UVr">
-                        <barButtonItem key="rightBarButtonItem" image="email" id="QnB-eg-0uY"/>
+                        <barButtonItem key="rightBarButtonItem" image="email" id="QnB-eg-0uY">
+                            <connections>
+                                <action selector="logOut:" destination="iJN-dy-xGg" id="PV7-W2-y6v"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="userPostCollectionView" destination="fvY-Zt-nuO" id="Q5m-im-tBA"/>
+                        <segue destination="z5g-i0-9B6" kind="presentation" identifier="logOut" animates="NO" id="ont-DD-bhN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDC-iM-O3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1352.8" y="53.523238380809602"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="jse-ae-po0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="z5g-i0-9B6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yjs-zP-bCQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2210" y="-182"/>
         </scene>
         <!--uploadNav-->
         <scene sceneID="ajh-Yr-Ecf">
@@ -1550,7 +1563,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4r4-zf-nqa">
                                         <rect key="frame" x="0.0" y="140" width="293" height="163"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6L-qn-yn0">
+                                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6L-qn-yn0">
                                                 <rect key="frame" x="8" y="7" width="277" height="86"/>
                                                 <color key="backgroundColor" red="0.80000000000000004" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

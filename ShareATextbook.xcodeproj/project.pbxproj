@@ -24,6 +24,7 @@
 		6A1244ED1F3574950079C7BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1244EC1F3574950079C7BE /* User.swift */; };
 		6A1244F01F357D800079C7BE /* ProfileViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1244EF1F357D800079C7BE /* ProfileViewTableViewCell.swift */; };
 		6A1244F21F3590E00079C7BE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1244F11F3590E00079C7BE /* ProfileViewController.swift */; };
+		6A1244F41F35C3B10079C7BE /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1244F31F35C3B10079C7BE /* PopUpViewController.swift */; };
 		6A2244FC3810DC00C7A03DE3 /* Pods_ShareATextbook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDAD1AC93AE59F2727198E8 /* Pods_ShareATextbook.framework */; };
 		6A3514361F03583C00098ECB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3514351F03583C00098ECB /* Security.framework */; };
 		6A35143D1F03660700098ECB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A35143C1F03660700098ECB /* Login.storyboard */; };
@@ -66,7 +67,6 @@
 		6AD30B261F301CA80052A562 /* PostingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD30B251F301CA80052A562 /* PostingCollectionViewCell.swift */; };
 		6AD30B281F302AD50052A562 /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD30B271F302AD50052A562 /* Posting.swift */; };
 		6AD30B2A1F304B760052A562 /* PostLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD30B291F304B760052A562 /* PostLayout.swift */; };
-		6AD7519B1F22D48A00F67749 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD7519A1F22D48A00F67749 /* Profile.storyboard */; };
 		6AD83A591F1C5B5700C6C7DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD83A581F1C5B5700C6C7DE /* HomeViewController.swift */; };
 		6AD83A5B1F1C5D2600C6C7DE /* LoginGlobalVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD83A5A1F1C5D2600C6C7DE /* LoginGlobalVar.swift */; };
 		8D258E14A50E1F7B5E26DDB2 /* Pods_ShareATextbookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 873C60DC19D5D2359DCE7BD7 /* Pods_ShareATextbookTests.framework */; };
@@ -117,6 +117,7 @@
 		6A1244EC1F3574950079C7BE /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6A1244EF1F357D800079C7BE /* ProfileViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewTableViewCell.swift; sourceTree = "<group>"; };
 		6A1244F11F3590E00079C7BE /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6A1244F31F35C3B10079C7BE /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		6A3514351F03583C00098ECB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		6A3514371F03588100098ECB /* bridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bridgingHeader.h; path = ../bridgingHeader.h; sourceTree = "<group>"; };
 		6A35143C1F03660700098ECB /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -161,7 +162,6 @@
 		6AD30B251F301CA80052A562 /* PostingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostingCollectionViewCell.swift; sourceTree = "<group>"; };
 		6AD30B271F302AD50052A562 /* Posting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
 		6AD30B291F304B760052A562 /* PostLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostLayout.swift; sourceTree = "<group>"; };
-		6AD7519A1F22D48A00F67749 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		6AD83A581F1C5B5700C6C7DE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6AD83A5A1F1C5D2600C6C7DE /* LoginGlobalVar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginGlobalVar.swift; sourceTree = "<group>"; };
 		76EE4C131E5E94275BDF8594 /* Pods-ShareATextbookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareATextbookTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareATextbookTests/Pods-ShareATextbookTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -306,7 +306,6 @@
 				6AAAF6381F34576900757420 /* Upload.storyboard */,
 				6A35143C1F03660700098ECB /* Login.storyboard */,
 				6A9D566A1F078DBA009F77AD /* Home.storyboard */,
-				6AD7519A1F22D48A00F67749 /* Profile.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -334,6 +333,7 @@
 				6AAAF62C1F33C38A00757420 /* MessageGroupDetailRejectViewController.swift */,
 				6A1244E41F3556E20079C7BE /* ProfileTableViewController.swift */,
 				6A1244F11F3590E00079C7BE /* ProfileViewController.swift */,
+				6A1244F31F35C3B10079C7BE /* PopUpViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -527,7 +527,6 @@
 				6A9AB4581F13201B00CA8396 /* Search.storyboard in Resources */,
 				6AAAF62F1F33DA6700757420 /* Assets.xcassets in Resources */,
 				6AAAF6391F34576900757420 /* Upload.storyboard in Resources */,
-				6AD7519B1F22D48A00F67749 /* Profile.storyboard in Resources */,
 				6A9AB4561F13201B00CA8396 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -698,6 +697,7 @@
 				51E9A8C91F272A6B00201893 /* DescriptionViewController.swift in Sources */,
 				51874BCB1F146A6000DDCD91 /* ISBN.swift in Sources */,
 				6A9AB41E1F131E6D00CA8396 /* SwiftJSON.swift in Sources */,
+				6A1244F41F35C3B10079C7BE /* PopUpViewController.swift in Sources */,
 				6A9AB44E1F131FE000CA8396 /* DetailsViewController.swift in Sources */,
 				6AAAF62D1F33C38A00757420 /* MessageGroupDetailRejectViewController.swift in Sources */,
 				6AD83A5B1F1C5D2600C6C7DE /* LoginGlobalVar.swift in Sources */,

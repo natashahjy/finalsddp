@@ -21,6 +21,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
             postings in
             
             self.postList = postings
+            self.postList.reverse()
             
             DispatchQueue.main.async {
                 self.postingCollectionView.reloadData()

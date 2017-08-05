@@ -21,6 +21,7 @@ class NotificationsViewController: UIViewController, UITableViewDataSource, UITa
                 messageGroups in
                 
                 self.messageGroupList = messageGroups
+                 self.messageGroupList.reverse()
                 
                 DispatchQueue.main.async {
                     self.messageGroupTableView.reloadData()
@@ -33,6 +34,7 @@ class NotificationsViewController: UIViewController, UITableViewDataSource, UITa
                 messageGroups in
                 
                 self.messageGroupList = messageGroups
+                self.messageGroupList.reverse()
                 
                 DispatchQueue.main.async {
                     self.messageGroupTableView.reloadData()
@@ -45,6 +47,7 @@ class NotificationsViewController: UIViewController, UITableViewDataSource, UITa
                 messageGroups in
                 
                 self.messageGroupList = messageGroups
+                self.messageGroupList.reverse()
                 
                 DispatchQueue.main.async {
                     self.messageGroupTableView.reloadData()
@@ -57,6 +60,7 @@ class NotificationsViewController: UIViewController, UITableViewDataSource, UITa
                 messageGroups in
                 
                 self.messageGroupList = messageGroups
+                self.messageGroupList.reverse()
                 
                 DispatchQueue.main.async {
                     self.messageGroupTableView.reloadData()
@@ -69,6 +73,7 @@ class NotificationsViewController: UIViewController, UITableViewDataSource, UITa
                 messageGroups in
                 
                 self.messageGroupList = messageGroups
+                self.messageGroupList.reverse()
                 
                 DispatchQueue.main.async {
                     self.messageGroupTableView.reloadData()
@@ -85,6 +90,7 @@ class NotificationsViewController: UIViewController, UITableViewDataSource, UITa
             messageGroups in
             
             self.messageGroupList = messageGroups
+            self.messageGroupList.reverse()
             
             DispatchQueue.main.async {
                 self.messageGroupTableView.reloadData()

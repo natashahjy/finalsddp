@@ -88,8 +88,6 @@ class PostingDataManager {
                         post.by = (json![i]["by"].string)!
                         post.postdts = (json![i]["postdts"].string)!
                         post.postingId = (json![i]["id"].string)!
-//                        post.status = (json![i]["status"].string)!
-                        
 //                        post.image = (json![i]["photos"].string)!
                         
                         postingList.append(post)
@@ -139,7 +137,19 @@ class PostingDataManager {
                         post.by = (json![i]["by"].string)!
                         post.postdts = (json![i]["postdts"].string)!
                         post.postingId = (json![i]["id"].string)!
-//                        post.status = (json![i]["status"].string)!
+                        
+                        if (json![i]["status"]).exists() {
+                            if (json![i]["status"].string!) == "D" {
+                                post.status = "Donated"
+                            }
+                            else {
+                                post.status = "Reserved"
+                            }
+                            print(post.status)
+                        } else {
+                            post.status = "Available"
+                            print(post.status)
+                        }
                         //post.image = (json![i]["photos"].string)!
                         
                         postingList.append(post)

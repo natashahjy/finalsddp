@@ -19,6 +19,8 @@ class LoginViewController: UIViewController{
         emailLogin()
     }
  
+    var isLogin: String!
+    
     func emailLogin () {
         
         let email = emailTF.text!
@@ -35,8 +37,15 @@ class LoginViewController: UIViewController{
                     if (isLogin) {
                         DispatchQueue.main.async() {
                             [unowned self] in
-                           self.performSegue(withIdentifier: "login", sender: self)
+                            self.performSegue(withIdentifier: "login", sender: self)
                         }
+                    } else {
+                        
+                        DispatchQueue.main.async() {
+                            [unowned self] in
+                            self.performSegue(withIdentifier: "loginError", sender: self)
+                        }
+                        
                     }
             })
         }
@@ -65,6 +74,13 @@ class LoginViewController: UIViewController{
                             [unowned self] in
                             self.performSegue(withIdentifier: "login", sender: self)
                         }
+                    } else {
+                        
+                        DispatchQueue.main.async() {
+                            [unowned self] in
+                               self.performSegue(withIdentifier: "loginError", sender: self)
+                        }
+    
                     }
                     
                 })
