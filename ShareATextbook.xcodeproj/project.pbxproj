@@ -10,6 +10,7 @@
 		418B3B881EB8E35300D05CB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B3B871EB8E35300D05CB6 /* AppDelegate.swift */; };
 		418B3B9D1EB8E35400D05CB6 /* ShareATextbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B3B9C1EB8E35400D05CB6 /* ShareATextbookTests.swift */; };
 		418B3BA81EB8E35400D05CB6 /* ShareATextbookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B3BA71EB8E35400D05CB6 /* ShareATextbookUITests.swift */; };
+		41F40D0F1F3624A600C40975 /* PhotoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F40D0E1F3624A600C40975 /* PhotoDataManager.swift */; };
 		5126A8631F298FBB0099678F /* ISBNDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5126A8621F298FBB0099678F /* ISBNDataManager.swift */; };
 		5126A8651F29922D0099678F /* CategoryDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5126A8641F29922D0099678F /* CategoryDataManager.swift */; };
 		5146803A1F132CBD0059CD4A /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514680381F132CBD0059CD4A /* BarcodeScannerViewController.swift */; };
@@ -101,6 +102,7 @@
 		418B3BA31EB8E35400D05CB6 /* ShareATextbookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareATextbookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		418B3BA71EB8E35400D05CB6 /* ShareATextbookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareATextbookUITests.swift; sourceTree = "<group>"; };
 		418B3BA91EB8E35400D05CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41F40D0E1F3624A600C40975 /* PhotoDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataManager.swift; sourceTree = "<group>"; };
 		4A7DF222E5CD0500A0FCB288 /* Pods-ShareATextbookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareATextbookUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareATextbookUITests/Pods-ShareATextbookUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5126A8621F298FBB0099678F /* ISBNDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISBNDataManager.swift; sourceTree = "<group>"; };
 		5126A8641F29922D0099678F /* CategoryDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDataManager.swift; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 				6AD30B231F2F1B660052A562 /* PostingDataManager.swift */,
 				6AAAF61B1F3182DD00757420 /* RequestDataManager.swift */,
 				6A1244EA1F3573410079C7BE /* UserDataManager.swift */,
+				41F40D0E1F3624A600C40975 /* PhotoDataManager.swift */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -701,6 +704,7 @@
 				6A9AB44E1F131FE000CA8396 /* DetailsViewController.swift in Sources */,
 				6AAAF62D1F33C38A00757420 /* MessageGroupDetailRejectViewController.swift in Sources */,
 				6AD83A5B1F1C5D2600C6C7DE /* LoginGlobalVar.swift in Sources */,
+				41F40D0F1F3624A600C40975 /* PhotoDataManager.swift in Sources */,
 				6AAAF62B1F33B71300757420 /* MessageGroupDetailAcceptViewController.swift in Sources */,
 				6AAAF6221F31D51900757420 /* MessageGroup.swift in Sources */,
 				6A9AB4501F131FE000CA8396 /* BarcodeViewController.swift in Sources */,
