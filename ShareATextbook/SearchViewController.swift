@@ -8,30 +8,44 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UITableViewController {
 
     let searchController = UISearchController(searchResultsController: nil)
-    var filteredListings = [Upload]()
+    var listing = [Posting]()
+    var filteredListings = [Posting]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         searchController.searchResultsUpdater = self as! UISearchResultsUpdating
+        searchController.searchBar.delegate = self as! UISearchBarDelegate
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
-     //   tableView.tableHeaderView = searchController.searchBar
+        
+        searchController.searchBar.scopeButtonTitles=["All" , "Primary", "Secondary"]
+        tableView.tableHeaderView = searchController.searchBar
     }
 
+    func loadListing()
+    {
+        PostingDataManager.listAllPostings(onComplete: {
+            positings in
+            self.listing = listings
+            
+            DispatchQueue.main.async {
+            }
+        })
+    }
     func filterContentForSearchText(searchText: String, scope: String = "All") {
-        /*
-        filteredListings = listings.filter {
-        candy in
-            return candy.name.lowercaseString.containsString(searchText.lowercaseString)
+        
+        filteredListings = listing.filter {
+        listing in
+            return listing.name.lowercased().contains(searchText.lowercased())
         }
         
-    //    tableView.reloadData()
-         */
+        tableView.reloadData()
+        
     }
     
     override func didReceiveMemoryWarning() {
