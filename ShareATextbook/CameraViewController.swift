@@ -65,6 +65,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.imageView!.image = chosenImage
         
         picker.dismiss(animated: true)
+
     }
 
     
@@ -75,7 +76,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func addPhoto(){
-        PhotoDataManager.addphoto(token: LoginGlobalVar.token, file: "")
+        PhotoDataManager.addphoto(token: LoginGlobalVar.token, file:"")
     }
     
     /*
