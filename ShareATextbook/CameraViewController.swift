@@ -13,6 +13,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var takePicture: UIButton!
     @IBOutlet weak var selectPicture: UIButton!
+    @IBOutlet weak var savePicture: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +55,10 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             picker, animated: true)
     }
     
+    @IBAction func savePicture(sender: AnyObject) {
+        addPhoto()
+    }
+    
     func convertImageToBase64(image: UIImage) -> String {
         var imageData = UIImagePNGRepresentation(image)
         let base64String = imageData?.base64EncodedString()
@@ -63,7 +69,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let chosenImage : UIImage = info[UIImagePickerControllerEditedImage] as! UIImage
         self.imageView!.image = chosenImage
-        
+        let data = UIImagePNGRepresentation(chosenImage)
         picker.dismiss(animated: true)
 
     }
@@ -76,7 +82,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func addPhoto(){
-        PhotoDataManager.addphoto(token: LoginGlobalVar.token, file:"")
+        PhotoDataManager.addphoto(token: LoginGlobalVar.token, file: "")
     }
     
     /*

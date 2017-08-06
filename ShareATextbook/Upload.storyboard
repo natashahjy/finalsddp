@@ -128,17 +128,24 @@
                                         <rect key="frame" x="0.0" y="523" width="375" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiY-oJ-0uC">
-                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="80"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="80"/>
                                                 <state key="normal" title="Take Picture"/>
                                                 <connections>
                                                     <action selector="takePictureWithSender:" destination="rhE-c0-ROK" eventType="touchUpInside" id="S5k-uD-FWP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heX-it-D7g">
-                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="80"/>
+                                                <rect key="frame" x="125" y="0.0" width="125" height="80"/>
                                                 <state key="normal" title="Select Picture"/>
                                                 <connections>
                                                     <action selector="selectPictureWithSender:" destination="rhE-c0-ROK" eventType="touchUpInside" id="rix-pQ-HoH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgN-H9-PPj">
+                                                <rect key="frame" x="250" y="0.0" width="125" height="80"/>
+                                                <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="savePictureWithSender:" destination="rhE-c0-ROK" eventType="touchUpInside" id="3Tq-Gm-eZN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -159,6 +166,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="C5g-lp-u1z" id="fBO-DG-Elq"/>
+                        <outlet property="savePicture" destination="OgN-H9-PPj" id="vI3-0E-bgu"/>
                         <outlet property="selectPicture" destination="heX-it-D7g" id="Vto-ZH-R6h"/>
                         <outlet property="takePicture" destination="YiY-oJ-0uC" id="Wzn-cK-azG"/>
                     </connections>
