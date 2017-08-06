@@ -10,14 +10,6 @@ import UIKit
 
 class UploadViewController: UIViewController {
     
-    var barcode: String!
-    var bookTitle: String!
-    var category : String!
-    var desc: String!
-    var author: String!
-    var publisher: String!
-    var edition: String!
-    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var barcodeLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
@@ -28,23 +20,28 @@ class UploadViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     var listingList: [List] = []
+    var listItem : List!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadListing()
         
         let date = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "dd.MM.yyyy"
         let dateResult = formatter.string(from: date)
         
-        dateLabel.text = dateResult
-        barcodeLabel.text = barcode
-        authorLabel.text = author
-        publisherLabel.text = publisher
-        editionLabel.text = edition
-        descLabel.text = desc
-        userLabel.text = ""
-        titleLabel.text = bookTitle
-
+        if listItem != nil{
+            dateLabel.text = dateResult
+            barcodeLabel.text = ""
+            authorLabel.text = ""
+            publisherLabel.text = ""
+            editionLabel.text = ""
+            descLabel.text = ""
+            userLabel.text = ""
+            titleLabel.text = ""
+        }
     }
 
 
@@ -55,7 +52,7 @@ class UploadViewController: UIViewController {
             self.listingList = listList
             
             DispatchQueue.main.async
-                {
+            {
             
             }
         })
